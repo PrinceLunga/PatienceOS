@@ -1,0 +1,10 @@
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS.DataAccess\bin\Debug\netcoreapp3.0\POSS.DataAccess.deps.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS.DataAccess\bin\Debug\netcoreapp3.0\POSS.DataAccess.runtimeconfig.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS.DataAccess\bin\Debug\netcoreapp3.0\POSS.DataAccess.runtimeconfig.dev.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS.DataAccess\bin\Debug\netcoreapp3.0\POSS.DataAccess.dll
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS.DataAccess\bin\Debug\netcoreapp3.0\POSS.DataAccess.pdb
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS.DataAccess\obj\Debug\netcoreapp3.0\POSS.DataAccess.csprojAssemblyReference.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS.DataAccess\obj\Debug\netcoreapp3.0\POSS.DataAccess.AssemblyInfoInputs.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS.DataAccess\obj\Debug\netcoreapp3.0\POSS.DataAccess.AssemblyInfo.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS.DataAccess\obj\Debug\netcoreapp3.0\POSS.DataAccess.dll
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS.DataAccess\obj\Debug\netcoreapp3.0\POSS.DataAccess.pdb

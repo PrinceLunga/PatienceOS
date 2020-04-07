@@ -1,0 +1,8 @@
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSSModels\bin\Debug\netcoreapp3.1\POSS.Models.deps.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSSModels\bin\Debug\netcoreapp3.1\POSS.Models.dll
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSSModels\bin\Debug\netcoreapp3.1\POSS.Models.pdb
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSSModels\obj\Debug\netcoreapp3.1\POSS.Models.AssemblyInfoInputs.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSSModels\obj\Debug\netcoreapp3.1\POSS.Models.AssemblyInfo.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSSModels\obj\Debug\netcoreapp3.1\POSS.Models.dll
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSSModels\obj\Debug\netcoreapp3.1\POSS.Models.pdb
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSSModels\obj\Debug\netcoreapp3.1\POSS.Models.csprojAssemblyReference.cache
