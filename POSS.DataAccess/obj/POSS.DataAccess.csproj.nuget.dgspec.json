@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.DataAccess\\POSS.DataAccess.csproj": {}
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.DataAccess\\POSS.DataAccess.csproj": {
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.DataAccess\\POSS.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj",
         "projectName": "POSS.DataAccess",
-        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.DataAccess\\POSS.DataAccess.csproj",
+        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj",
         "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

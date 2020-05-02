@@ -42,6 +42,7 @@ namespace POSS
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
             });
 
+            services.AddResponseCompression();
             services.AddDbContext<POSSDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DBConnection"),
                     x => x.MigrationsAssembly("POSS.DataAccess")));
@@ -61,6 +62,8 @@ namespace POSS
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseResponseCompression();
 
             app.UseHttpsRedirection();
 

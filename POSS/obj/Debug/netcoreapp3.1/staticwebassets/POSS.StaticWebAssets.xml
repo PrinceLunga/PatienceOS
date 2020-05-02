@@ -1,1 +1,3 @@
-﻿<StaticWebAssets Version="1.0" />
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="_content/POSSMvc" Path="C:\Users\prince.lunga\Desktop\Prince\Projects\PatienceOS\PatienceOS\POSSMvc\wwwroot\" />
+</StaticWebAssets>

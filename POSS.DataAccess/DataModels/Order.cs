@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -12,10 +13,13 @@ namespace POSS.DataAccess.DataModels
         public string Type { get; set; }
         public string Description { get; set; }
         public int Number { get; set; }
+        public int Total { get; set; }
         public string Status { get; set; }
         public DateTime OrderDate { get; set; }
         public DateTime CompletionDate { get; set; }
         public int CustomerId { get; set; }
         public virtual Customer Customer { get; set; } 
+        public int CartId { get; set; }
+        public DbSet<Cart>  Cart { get; set; }
     }
 }

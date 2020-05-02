@@ -1,0 +1,8 @@
+C:\Users\prince.lunga\Desktop\Prince\Projects\PatienceOS\PatienceOS\Helpers\bin\Debug\netcoreapp3.1\Helpers.deps.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\PatienceOS\PatienceOS\Helpers\bin\Debug\netcoreapp3.1\Helpers.dll
+C:\Users\prince.lunga\Desktop\Prince\Projects\PatienceOS\PatienceOS\Helpers\bin\Debug\netcoreapp3.1\Helpers.pdb
+C:\Users\prince.lunga\Desktop\Prince\Projects\PatienceOS\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.AssemblyInfoInputs.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\PatienceOS\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.AssemblyInfo.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\PatienceOS\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.dll
+C:\Users\prince.lunga\Desktop\Prince\Projects\PatienceOS\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.pdb
+C:\Users\prince.lunga\Desktop\Prince\Projects\PatienceOS\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.csprojAssemblyReference.cache

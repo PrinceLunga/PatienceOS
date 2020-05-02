@@ -1,42 +1,54 @@
-﻿@model POSSMvc.Models.Product
+﻿@model POSSMvc.Models.ProductModel
 @{ Layout = "_Layout"; ViewBag.Title = "Add a Product";}
 
 <h2>Add a Product <a asp-action="Index" class="btn btn-sm btn-secondary">Back</a></h2>
-<form asp-action="AddProduct" method="post">
+<form asp-action="AddProduct" method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label for="Name">Name:</label>
-        <input class="form-control" name="Name" />
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label for="StartLocation">Description:</label>
-        <input class="form-control" name="Description" />
+        <label asp-for="Description" class="control-label"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label for="Group">Group:</label>
-        <input class="form-control" name="Group" />
+        <label asp-for="Group" class="control-label"></label>
+        <input asp-for="Group" class="form-control" />
+        <span asp-validation-for="Group" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label for="SubGroup">SubGroup:</label>
-        <input class="form-control" name="SubGroup" />
+        <label asp-for="SubGroup" class="control-label"></label>
+        <input asp-for="SubGroup" class="form-control" />
+        <span asp-validation-for="SubGroup" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label for="Status">Status:</label>
-        <input class="form-control" name="Status" />
+        <label asp-for="Status" class="control-label"></label>
+        <input asp-for="Status" class="form-control" />
+        <span asp-validation-for="Status" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label for="Image">Image:</label>
-        <input class="form-control" name="Image" />
+        <label asp-for="Quantity" class="control-label"></label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price" class="control-label"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label for="Price">Price:</label>
-        <input class="form-control" name="Price" />
+        <label asp-for="Image" class="control-label"></label>
+       <input name="Image" type="file" class="btn btn-microsoft">
+        @*<input asp-for="Image" type="file" class="btn btn-microsoft">*@
+
     </div>
-    <div class="form-group">
-        <label for="Quantity">Quantity:</label>
-        <input class="form-control" name="Quantity" />
-    </div>
+
+
     <div class="text-center panel-body">
-        <button type="submit" class="btn btn-sm btn-primary">Add</button>
+        <button type="submit" class="btn btn-sm btn-primary">Add Product</button>
     </div>
 </form>
 
@@ -56,11 +68,17 @@
                 <td>@Model.Price</td>
                 <td>@Model.Quantity</td>
                 <td>
-                    @{
-                        var base64 = Convert.ToBase64String(Model.Image);
-                        var imgsrc = String.Format("data:image/gif;base64,{0}", base64);
+                    <img src="@ViewBag.ImgPath" alt="@Model.Image" height="100" width="100" />
+                    @*<br />
+                    @if (!string.IsNullOrEmpty(ViewBag.FileName))
+                    {
+                        <a href="~/Users/Download?img=@ViewBag.FileName&userId=@Model.Image">Download</a>
+                        <br />
+
                     }
-                    <img src="@imgsrc" width="200" height="150" />
+                    <input type="file" name="user_image" id="user_image" />
+
+                    @Model.Image*@
                 </td>
             </tr>
         </tbody>

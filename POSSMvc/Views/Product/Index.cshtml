@@ -19,11 +19,19 @@
             <td>@r.Quantity</td>
             <td>@r.Description</td>
             <td>
+                @r.Description
+            </td>
+            <td>
                 @{
                     var base64 = Convert.ToBase64String(r.Image);
                     var imgsrc = String.Format("data:image/gif;base64,{0}", base64);
                 }
-                <img src="@imgsrc" width="200" height="150" />
+                <img src="@imgsrc" width="400" height="200" />
+
+                @*<img src="~/images/@r.Image"
+        class="rounded-circle"
+        height="40" width="40"
+        asp-append-version="true" />*@
             </td>
             @*<td>@r.Status</td>*@
             <td>

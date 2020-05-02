@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Text.Unicode;
+using System.Threading;
 using System.Threading.Tasks;
 using java.lang;
 using javax.xml.crypto;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using POSSMvc.Models;
@@ -21,7 +26,7 @@ namespace POSSMvc.Controllers
             List<Product> reservationList = new List<Product>();
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("https://localhost:44374/api/Products"))
+                using (var response = await httpClient.GetAsync("https://localhost:5001/api/Products/GetProducts"))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     reservationList = JsonConvert.DeserializeObject<List<Product>>(apiResponse);
@@ -38,7 +43,7 @@ namespace POSSMvc.Controllers
             Product product = new Product();
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("https://localhost:44374/api/Products/" + id))
+                using (var response = await httpClient.GetAsync("https://localhost:5001/api/Products/GetProduct/" + id))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     product = JsonConvert.DeserializeObject<Product>(apiResponse);
@@ -47,30 +52,91 @@ namespace POSSMvc.Controllers
             return View(product);
         }
 
+        public static void SerializeJsonIntoStream(object value, Stream stream)
+        {
+            using (var sw = new StreamWriter(stream, new UTF8Encoding(false), 1024, true))
+            using (var jtw = new JsonTextWriter(sw) { Formatting = Formatting.None })
+            {
+                var js = new JsonSerializer();
+                js.Serialize(jtw, value);
+                jtw.Flush();
+            }
+        }
+
+        private static HttpContent CreateHttpContent(object content)
+        {
+            HttpContent httpContent = null;
+
+            if (content != null)
+            {
+                var ms = new MemoryStream();
+                SerializeJsonIntoStream(content, ms);
+                ms.Seek(0, SeekOrigin.Begin);
+                httpContent = new StreamContent(ms);
+                httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            }
+
+            return httpContent;
+        }
+
         public ViewResult AddProduct() => View();
 
         [HttpPost]
-        public async Task<IActionResult> AddProduct(Product product)
+        public async Task<IActionResult> AddProduct([FromForm] ProductModel product, CancellationToken cancellationToken)
         {
-            Product receivedProduct = new Product();
-            using (var httpClient = new HttpClient())
+            string Url = "https://localhost:5001/api/Products/PostProduct";
+            using (var client = new HttpClient())
             {
-                StringContent content = new StringContent(JsonConvert.SerializeObject(product), Encoding.UTF8, "application/json");
+                //var a = Object;
+                 string Image = "";
+                 MultipartFormDataContent multiContent = new MultipartFormDataContent();
 
-                using (var response = await httpClient.PostAsync("https://localhost:44374/api/Products", content))
+                 using (var memoryStream = new MemoryStream())
+                 {
+                     await product.Image.CopyToAsync(memoryStream);
+                     var a = memoryStream.ToArray();
+                     Image = Convert.ToBase64String(a);
+
+                 }
+                var response = new HttpResponseMessage();
+
+                var PostProduct = new ProductPost
                 {
-                    string apiResponse = await response.Content.ReadAsStringAsync();
-                    receivedProduct = JsonConvert.DeserializeObject<Product>(apiResponse);
-                }
+                    Id = product.Id,
+                    Description = product.Description,
+                    Group = product.Group,
+                    Image = Image,
+                    Name = product.Name,
+                    Price = product.Price,
+                    Quantity = product.Quantity,
+                    Status = product.Status,
+                    SubGroup = product.SubGroup
+                };
+
+                var formDataContent = new MultipartFormDataContent();
+                formDataContent.Add(new StringContent(PostProduct.Image), "image");
+                formDataContent.Add(new StringContent(PostProduct.Name), "name");
+                formDataContent.Add(new StringContent(PostProduct.Description), "description");
+                formDataContent.Add(new StringContent(PostProduct.Group), "group");
+                formDataContent.Add(new StringContent(PostProduct.SubGroup), "subGroup");
+                formDataContent.Add(new StringContent(PostProduct.Status), "status");
+                formDataContent.Add(new StringContent(PostProduct.Price), "price");
+                formDataContent.Add(new StringContent(PostProduct.Quantity), "quantity");
+
+                response = await client.PostAsync(Url.ToString(), formDataContent);
+
+                var data = await response.Content.ReadAsStringAsync();
+                response.EnsureSuccessStatusCode();
             }
-            return View(receivedProduct);
+            return RedirectToAction(nameof(Index));
         }
+
         public async Task<IActionResult> UpdateProduct(int id)
         {
             UpdateProductcs product = new UpdateProductcs();
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("https://localhost:44374/api/Products/" + id))
+                using (var response = await httpClient.GetAsync("https://localhost:5001/api/Products/GetProduct/" + id))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     product = JsonConvert.DeserializeObject<UpdateProductcs>(apiResponse);
@@ -93,7 +159,7 @@ namespace POSSMvc.Controllers
 
                 inputMessage.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                HttpResponseMessage message = httpClient.PutAsync("https://localhost:44374/api/Products", inputMessage.Content).Result;
+                HttpResponseMessage message = httpClient.PutAsync("https://localhost:5001/api/Products/PutProduct", inputMessage.Content).Result;
 
                 if (!message.IsSuccessStatusCode)
                     throw new ArgumentException(message.ToString());

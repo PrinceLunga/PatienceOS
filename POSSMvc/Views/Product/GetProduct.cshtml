@@ -30,8 +30,14 @@
                     @{
                         var base64 = Convert.ToBase64String(Model.Image);
                         var imgsrc = String.Format("data:image/gif;base64,{0}", base64);
-                    }
-                    <img src="@imgsrc" width="400" height="300" />
+                      }
+                  <img src="@imgsrc" width="400" height="300" />
+                   
+
+                @*<img src="~/images/ @Model.Image"
+                         class="rounded-circle"
+                         height="40" width="40"
+                         asp-append-version="true" />*@
                 </td>
             </tr>
         </tbody>

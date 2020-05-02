@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POSS.DataAccess.DataModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -22,6 +23,7 @@ namespace POSS.DataAccess.ProductModels
         public String ModifiedBy { get; set; }
         public DateTime DateModified { get; set; }
         public DateTime DateDeleted { get; set; }
+        public List<Cart> Products { get; set; }
 
     }
 }

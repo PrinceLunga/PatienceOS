@@ -17,7 +17,7 @@ using POSSModels;
 
 namespace POSS.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
@@ -83,15 +83,11 @@ namespace POSS.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<ProductModel>> PostProduct(ProductModel product, IFormFile ImageFile)
+        [AcceptVerbs("POST")]
+        public  ActionResult<ProductModel> PostProduct([FromForm] ProductModel product)
         {
-            using (var ms = new MemoryStream())
-            {
-                //ImageFile.in.CopyTo(ms);
-                product.Image = ms.ToArray();
-            }
-            _context.Add_Product(product);
-            return CreatedAtAction("GetProduct", new { id = product.Id }, product);
+            string results =  _context.Add_Product(product);
+            return product;
         }
 
         // DELETE: api/Products/5

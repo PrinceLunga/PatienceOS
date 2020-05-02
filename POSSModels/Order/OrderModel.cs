@@ -1,4 +1,5 @@
-﻿using POSS.Models.Customer;
+﻿using POSS.Models.Cart;
+using POSS.Models.Customer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -18,5 +19,7 @@ namespace POSS.Models.Order
         public DateTime CompletionDate { get; set; }
         public int CustomerId { get; set; }
         public virtual CustomerModel Customer { get; set; }
+        public int CartId { get; set; }
+        public CartModel Cart { get; set; }
     }
 }

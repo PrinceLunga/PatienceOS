@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS\\POSS.csproj": {}
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS\\POSS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\Helpers\\Helpers.csproj": {
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\Helpers\\Helpers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\Helpers\\Helpers.csproj",
+        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\Helpers\\Helpers.csproj",
         "projectName": "Helpers",
-        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\Helpers\\Helpers.csproj",
+        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\Helpers\\Helpers.csproj",
         "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\Helpers\\obj\\",
+        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\Helpers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -61,14 +61,14 @@
         }
       }
     },
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.DataAccess\\POSS.DataAccess.csproj": {
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.DataAccess\\POSS.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj",
         "projectName": "POSS.DataAccess",
-        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.DataAccess\\POSS.DataAccess.csproj",
+        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj",
         "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -134,14 +134,14 @@
         }
       }
     },
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.Services\\POSS.Services.csproj": {
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.Services\\POSS.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.Services\\POSS.Services.csproj",
+        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.Services\\POSS.Services.csproj",
         "projectName": "POSS.Services",
-        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.Services\\POSS.Services.csproj",
+        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.Services\\POSS.Services.csproj",
         "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.Services\\obj\\",
+        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -162,14 +162,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\Helpers\\Helpers.csproj": {
-                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\Helpers\\Helpers.csproj"
+              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\Helpers\\Helpers.csproj": {
+                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\Helpers\\Helpers.csproj"
               },
-              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.DataAccess\\POSS.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.DataAccess\\POSS.DataAccess.csproj"
+              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj"
               },
-              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSSModels\\POSS.Models.csproj": {
-                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSSModels\\POSS.Models.csproj"
+              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSModels\\POSS.Models.csproj": {
+                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSModels\\POSS.Models.csproj"
               }
             }
           }
@@ -223,14 +223,14 @@
         }
       }
     },
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSSModels\\POSS.Models.csproj": {
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSModels\\POSS.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSSModels\\POSS.Models.csproj",
+        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSModels\\POSS.Models.csproj",
         "projectName": "POSS.Models",
-        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSSModels\\POSS.Models.csproj",
+        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSModels\\POSS.Models.csproj",
         "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSSModels\\obj\\",
+        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -261,6 +261,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -280,14 +286,118 @@
         }
       }
     },
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS\\POSS.csproj": {
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSMvc\\POSSMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS\\POSS.csproj",
-        "projectName": "POSS",
-        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS\\POSS.csproj",
+        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSMvc\\POSSMvc.csproj",
+        "projectName": "POSSMvc",
+        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSMvc\\POSSMvc.csproj",
         "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS\\obj\\",
+        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSMvc\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\prince.lunga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "IKVM": {
+              "target": "Package",
+              "version": "[8.1.5717, )"
+            },
+            "Microsoft.AspNetCore.ResponseCompression": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Net.Http": {
+              "target": "Package",
+              "version": "[2.2.29, )"
+            },
+            "Microsoft.Net.Http.Headers": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Net.Http.Formatting.Extension": {
+              "target": "Package",
+              "version": "[5.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.0.2, 3.0.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS\\POSS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS\\POSS.csproj",
+        "projectName": "POSS",
+        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS\\POSS.csproj",
+        "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -308,11 +418,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.DataAccess\\POSS.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.DataAccess\\POSS.DataAccess.csproj"
+              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj"
               },
-              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.Services\\POSS.Services.csproj": {
-                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS.Services\\POSS.Services.csproj"
+              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.Services\\POSS.Services.csproj": {
+                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSS.Services\\POSS.Services.csproj"
+              },
+              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSMvc\\POSSMvc.csproj": {
+                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSMvc\\POSSMvc.csproj"
               }
             }
           }
@@ -329,6 +442,10 @@
             "Microsoft.AspNet.WebApi.Core": {
               "target": "Package",
               "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.ResponseCompression": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

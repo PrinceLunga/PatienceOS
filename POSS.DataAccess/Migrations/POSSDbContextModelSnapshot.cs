@@ -19,6 +19,134 @@ namespace POSS.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("POSS.DataAccess.DataModels.Cart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("Discount")
+                        .HasColumnType("float");
+
+                    b.Property<int>("NumberOfItems")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Total")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Carts");
+                });
+
+            modelBuilder.Entity("POSS.DataAccess.DataModels.Customer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CellNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EmailAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Fullnames")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Customers");
+                });
+
+            modelBuilder.Entity("POSS.DataAccess.DataModels.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CartId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CompletionDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Total")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("POSS.DataAccess.ProductModels.Group", b =>
                 {
                     b.Property<int>("Id")
@@ -56,7 +184,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 3, 29, 15, 54, 6, 459, DateTimeKind.Local).AddTicks(5963),
+                            DateCreated = new DateTime(2020, 4, 10, 4, 49, 46, 141, DateTimeKind.Local).AddTicks(29),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Department as per categories e.g Footwear, Accessories",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -66,7 +194,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             Id = 2,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 3, 29, 15, 54, 6, 461, DateTimeKind.Local).AddTicks(8556),
+                            DateCreated = new DateTime(2020, 4, 10, 4, 49, 46, 142, DateTimeKind.Local).AddTicks(5353),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Seasons e.g Summer, Winter",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -76,7 +204,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             Id = 3,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 3, 29, 15, 54, 6, 461, DateTimeKind.Local).AddTicks(8601),
+                            DateCreated = new DateTime(2020, 4, 10, 4, 49, 46, 142, DateTimeKind.Local).AddTicks(5399),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Age e.g Kids, Adult, 10 - 15 years, ",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -138,7 +266,7 @@ namespace POSS.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2020, 3, 29, 15, 54, 6, 464, DateTimeKind.Local).AddTicks(1010),
+                            DateCreated = new DateTime(2020, 4, 10, 4, 49, 46, 144, DateTimeKind.Local).AddTicks(7632),
                             DateDeleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Blue Ladies Skinny Denim Jean",
@@ -153,7 +281,7 @@ namespace POSS.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            DateCreated = new DateTime(2020, 3, 29, 15, 54, 6, 464, DateTimeKind.Local).AddTicks(8566),
+                            DateCreated = new DateTime(2020, 4, 10, 4, 49, 46, 145, DateTimeKind.Local).AddTicks(4116),
                             DateDeleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Blue Guys Denim Jean Short",
@@ -168,7 +296,7 @@ namespace POSS.DataAccess.Migrations
                         new
                         {
                             Id = 4,
-                            DateCreated = new DateTime(2020, 3, 29, 15, 54, 6, 465, DateTimeKind.Local).AddTicks(3408),
+                            DateCreated = new DateTime(2020, 4, 10, 4, 49, 46, 145, DateTimeKind.Local).AddTicks(8799),
                             DateDeleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Blue Ladies Skinny Denim Jean",
@@ -224,7 +352,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             SubGroup_Id = 1,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 3, 29, 15, 54, 6, 462, DateTimeKind.Local).AddTicks(2941),
+                            DateCreated = new DateTime(2020, 4, 10, 4, 49, 46, 142, DateTimeKind.Local).AddTicks(9785),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Adidas sport sneaker",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -235,7 +363,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             SubGroup_Id = 2,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 3, 29, 15, 54, 6, 462, DateTimeKind.Local).AddTicks(4514),
+                            DateCreated = new DateTime(2020, 4, 10, 4, 49, 46, 143, DateTimeKind.Local).AddTicks(1041),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Leather Sandals",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -246,7 +374,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             SubGroup_Id = 3,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 3, 29, 15, 54, 6, 462, DateTimeKind.Local).AddTicks(4591),
+                            DateCreated = new DateTime(2020, 4, 10, 4, 49, 46, 143, DateTimeKind.Local).AddTicks(1069),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Winter Leather Jacket",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -257,7 +385,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             SubGroup_Id = 4,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 3, 29, 15, 54, 6, 462, DateTimeKind.Local).AddTicks(4595),
+                            DateCreated = new DateTime(2020, 4, 10, 4, 49, 46, 143, DateTimeKind.Local).AddTicks(1069),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Winter Track Suit Pants and Top",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -268,7 +396,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             SubGroup_Id = 5,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 3, 29, 15, 54, 6, 462, DateTimeKind.Local).AddTicks(4602),
+                            DateCreated = new DateTime(2020, 4, 10, 4, 49, 46, 143, DateTimeKind.Local).AddTicks(1072),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "10 - 15 Years",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -279,7 +407,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             SubGroup_Id = 6,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 3, 29, 15, 54, 6, 462, DateTimeKind.Local).AddTicks(4606),
+                            DateCreated = new DateTime(2020, 4, 10, 4, 49, 46, 143, DateTimeKind.Local).AddTicks(1072),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "12 - 16 years",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -346,6 +474,34 @@ namespace POSS.DataAccess.Migrations
                             Role = "user",
                             Username = "user"
                         });
+                });
+
+            modelBuilder.Entity("POSS.DataAccess.DataModels.Cart", b =>
+                {
+                    b.HasOne("POSS.DataAccess.DataModels.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("POSS.DataAccess.DataModels.Order", null)
+                        .WithMany("Cart")
+                        .HasForeignKey("OrderId");
+
+                    b.HasOne("POSS.DataAccess.ProductModels.Product", "Product")
+                        .WithMany("Products")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("POSS.DataAccess.DataModels.Order", b =>
+                {
+                    b.HasOne("POSS.DataAccess.DataModels.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("POSS.DataAccess.ProductModels.SubGroup", b =>

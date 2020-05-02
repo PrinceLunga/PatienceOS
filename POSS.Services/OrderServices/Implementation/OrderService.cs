@@ -1,5 +1,6 @@
 ﻿using POSS.DataAccess.Context;
 using POSS.DataAccess.DataModels;
+using POSS.Models.Cart;
 using POSS.Models.Order;
 using POSS.Services.OrderServices.Interface;
 using System;
@@ -33,6 +34,7 @@ namespace POSS.Services.OrderServices.Implementation
                         order.OrderDate = model.OrderDate;
                         order.CompletionDate = DateTime.Now;
                         order.CustomerId = model.CustomerId;
+                        order.CartId = model.CartId;
 
                     }
 
@@ -60,7 +62,8 @@ namespace POSS.Services.OrderServices.Implementation
                         Number = model.Number,
                         Description = model.Description,
                         CustomerId = CustomerId,
-                        OrderDate = DateTime.Now
+                        OrderDate = DateTime.Now,
+                        CartId = model.CartId
                     };
                     dbContext.Orders.Add(order);
                     dbContext.SaveChanges();
@@ -85,10 +88,30 @@ namespace POSS.Services.OrderServices.Implementation
                         Number = z.Number,
                         Status = z.Status,
                         OrderDate = z.OrderDate,
-                        CompletionDate = z.CompletionDate
+                        CompletionDate = z.CompletionDate,
+                        CartId = z.CartId
                     }).SingleOrDefault();
             }
         }
+
+        public List<OrderModel> GetOrder()
+        {
+           using(dbContext)
+            {
+                return dbContext.Orders.Select(x => new OrderModel
+                {
+                    Id = x.Id,
+                    CartId = x.CartId,
+                    CustomerId = x.CustomerId,
+                    Description = x.Description,
+                    Number = x.Number,
+                    OrderDate = x.OrderDate,
+                    Status = x.Status,
+                    Type = x.Type
+                }).ToList();
+            }
+        }
+
         public string UpdateOrder(OrderModel model)
         {
             try
@@ -107,7 +130,7 @@ namespace POSS.Services.OrderServices.Implementation
 
                         dbContext.SaveChanges();
                     }
-                    return $"Order {order.Number} has been updated succesffully !";
+                    return $"Order {order.Number} has been updated succesfully !";
                 }
             }
             catch (Exception ex)

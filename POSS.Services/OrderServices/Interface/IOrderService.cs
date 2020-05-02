@@ -11,5 +11,6 @@ namespace POSS.Services.OrderServices.Interface
         public string UpdateOrder(OrderModel model);
         public OrderModel FindOrder(OrderModel model);
         public string CompleteOrder(OrderModel model);
+        public List<OrderModel> GetOrder();
     }
 }

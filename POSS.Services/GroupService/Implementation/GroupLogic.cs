@@ -51,7 +51,15 @@ namespace POSS.Services.GroupService.Implementation
 
         public GroupModel FindGroupById(int Id)
         {
-            throw new NotImplementedException();
+           using(dbContext)
+            {
+                return dbContext.Groups.Select( x => new GroupModel 
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Description = x.Description
+                } ).FirstOrDefault(b => b.Id == Id);
+            }
         }
 
         public List<GroupModel> GetGroups()
@@ -86,7 +94,24 @@ namespace POSS.Services.GroupService.Implementation
 
         public string UpdateGroup(GroupModel model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using(dbContext)
+                {
+                    var group = dbContext.Groups.Find(model.Id);
+
+                    group.Name = model.Name;
+                    group.Description = model.Description;
+
+                    dbContext.SaveChanges();
+                    return $"Group {model.Name} successfully created !";
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message.ToString();
+            }
         }
     }
 }

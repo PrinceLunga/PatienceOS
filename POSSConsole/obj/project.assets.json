@@ -5252,11 +5252,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSSConsole\\POSSConsole.csproj",
+      "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSConsole\\POSSConsole.csproj",
       "projectName": "POSSConsole",
-      "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSSConsole\\POSSConsole.csproj",
+      "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSConsole\\POSSConsole.csproj",
       "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSSConsole\\obj\\",
+      "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSConsole\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
