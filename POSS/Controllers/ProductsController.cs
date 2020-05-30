@@ -32,7 +32,7 @@ namespace POSS.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<ProductModel>> GetProducts()
         {
-            return _context.GetProducts  ();
+            return _context.GetProducts();
         }
 
         // GET: api/Products/5

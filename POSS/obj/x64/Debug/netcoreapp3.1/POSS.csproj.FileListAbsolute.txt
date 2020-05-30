@@ -1,0 +1,6 @@
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\x64\Debug\netcoreapp3.1\POSS.csprojAssemblyReference.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\x64\Debug\netcoreapp3.1\POSS.AssemblyInfoInputs.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\x64\Debug\netcoreapp3.1\POSS.AssemblyInfo.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\x64\Debug\netcoreapp3.1\POSS.csproj.CoreCompileInputs.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\x64\Debug\netcoreapp3.1\POSS.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\x64\Debug\netcoreapp3.1\POSS.MvcApplicationPartsAssemblyInfo.cache

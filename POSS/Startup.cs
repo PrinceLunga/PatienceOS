@@ -1,21 +1,21 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using POSS.DataAccess.Context;
+using POSS.Services.CartServices.Implementation;
+using POSS.Services.CartServices.Interface;
 using POSS.Services.GroupService.Implementation;
 using POSS.Services.GroupService.Interface;
 using POSS.Services.Implementation;
 using POSS.Services.Interfaces;
+using POSS.Services.OrderServices.Implementation;
+using POSS.Services.OrderServices.Interface;
 using POSS.Services.SubGroupServices.Implementation;
 using POSS.Services.SubGroupServices.Interface;
 
@@ -46,9 +46,44 @@ namespace POSS
             services.AddDbContext<POSSDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DBConnection"),
                     x => x.MigrationsAssembly("POSS.DataAccess")));
+
+
             services.AddScoped<IProductLogic, ProductLogic>();
             services.AddScoped<IGroupLogic, GroupLogic>();
             services.AddScoped<ISubGroupLogic, SubGroupLogic>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<ICartService, CartService>();
+
+            //Google Authentication
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = GoogleDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+
+            }).AddGoogle(options =>
+                {
+                    options.ClientId = "1097296782942-vml6kenaj2tcb0oto7146fs1j7gthssu.apps.googleusercontent.com";
+                    options.ClientSecret = "xHcXBVNZfpS1BUQ3Ejy0csbD";
+                });
+            services.AddMvc();
+
+            //In-Memory
+            services.AddDistributedMemoryCache();
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(10);
+            });
+            // Add framework services.
+
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true; // consent required
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            services.AddSession(opts =>
+            {
+                opts.Cookie.IsEssential = true; // make the session cookie Essential
+            });
 
         }
 
