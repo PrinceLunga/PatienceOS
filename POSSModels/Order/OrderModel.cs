@@ -11,15 +11,14 @@ namespace POSS.Models.Order
     {
         [Key]
         public int Id { get; set; }
-        public string Type { get; set; }
-        public string Description { get; set; }
-        public int Number { get; set; }
         public string Status { get; set; }
         public DateTime OrderDate { get; set; }
         public DateTime CompletionDate { get; set; }
+        public int Items { get; set; }
+        public double Discount { get; set; }
+        public double Total { get; set; }
+        public double VAT { get; set; }
         public int CustomerId { get; set; }
-        public virtual CustomerModel Customer { get; set; }
-        public int CartId { get; set; }
-        public CartModel Cart { get; set; }
+        public string CartUserId { get; set; }
     }
 }

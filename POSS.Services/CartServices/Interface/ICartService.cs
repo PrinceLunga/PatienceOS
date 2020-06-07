@@ -1,15 +1,21 @@
 ﻿using POSS.Models.Cart;
+using POSS.Services.CartServices.Implementation;
+using POSSModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace POSS.Services.CartService.Interface
+namespace POSS.Services.CartServices.Interface
 {
     public interface ICartService
     {
-        public string AddToCart(CartModel model);
+        public CartModel AddToCart(AddToCartModel model);
         public string UpdateCart(CartModel model);
-        public List<CartModel> ViewCustomerCart(string Username);
-        public string RemoveFromCart(CartModel model);
+        public List<ProductModel> ViewCustomerCart(string Username);
+        public string RemoveFromCart(int Id, string Username);
+        public int GetCustomerId(string username);
+        public void ClearCart();
+        public double GetShoppingCartTotal();
+        public List<CartModel> GetShoppingCartItems();
     }
 }

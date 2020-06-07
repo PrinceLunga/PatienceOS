@@ -5,11 +5,15 @@ class PostForm extends Component {
     constructor(props){
         super(props);
         this.state = {
-            id : '',
+            // id : '',
             name : '',
             group : '',
             subgroup : '',
-            status : ''
+            status : '',
+            quantity : '',
+            price : '',
+            description : '',
+            image : ''
         };
         this.onChange = this.onChange.bind(this);
         this.onsubmit = this.onsubmit.bind(this);
@@ -24,14 +28,17 @@ class PostForm extends Component {
         e.preventDefault();
 
         const post = {
-            id : this.state.id,
             name : this.state.name,
             group : this.state.group,
             subggroup : this.state.subgroup,
-            status : this.state.status  
+            status : this.state.status,
+            quantity : this.state.quantity,
+            price : this.state.price,
+            description : this.state.description,
+            image : this.state.image 
         }
 
-        fetch('https://localhost:44374/api/Products', {
+        fetch('https://localhost:5001/api/Products/PostProducts', {
             method : 'POST',
             headers : {
                 'content-type':'application/json'
@@ -82,6 +89,42 @@ class PostForm extends Component {
                              name="status"
                              onChange={this.onChange} 
                              value={this.state.status} />
+                    </div>
+
+                    <div>
+                        <label >Quantity</label> <br/>
+                        <input 
+                             type="text" 
+                             name="quantity"
+                             onChange={this.onChange} 
+                             value={this.state.quantity} />
+                    </div>
+
+                    <div>
+                        <label >Price</label> <br/>
+                        <input 
+                             type="text" 
+                             name="price"
+                             onChange={this.onChange} 
+                             value={this.state.price} />
+                    </div>
+
+                    <div>
+                        <label >Description</label> <br/>
+                        <input 
+                             type="text" 
+                             name="description"
+                             onChange={this.onChange} 
+                             value={this.state.description} />
+                    </div>
+
+                    <div>
+                        <label >Image</label> <br/>
+                        <input 
+                             type="text" 
+                             name="image"
+                             onChange={this.onChange} 
+                             value={this.state.image} />
                     </div>
                     <br/>
                     <button type="submit">Submit</button>

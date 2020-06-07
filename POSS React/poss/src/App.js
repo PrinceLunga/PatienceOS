@@ -4,6 +4,8 @@ import './App.css';
 
 import Posts from './Components/Posts';
 import PostForm from './Components/PostForm';
+import Groups from './Components/Groups';
+import GroupForm from './Components/GroupForm';
 
 function App() {
   return (
@@ -23,8 +25,15 @@ function App() {
         </a>
       </header>
       <PostForm />
+      
       <hr/>
       <Posts />
+
+      <hr/>
+      <Groups />
+
+      <hr/>
+      <GroupForm />
     </div>
 
   );

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gtwl81oxODLJg7cL0J/1QxFsvEVYTfUhuo2WDJNGK2uFDevgfeIVfDrDe/+/f9i3Q2lOpcEOGJgVnFK0MD9yYg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\Helpers\\Helpers.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\prince.lunga\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,4 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using POSS.DataAccess.ProductModels;
+using POSS.Models.Cart;
+using POSS.Models.Customer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,16 +13,13 @@ namespace POSS.DataAccess.DataModels
     {
         [Key]
         public int Id { get; set; }
-        public string Type { get; set; }
-        public string Description { get; set; }
-        public int Number { get; set; }
-        public int Total { get; set; }
         public string Status { get; set; }
         public DateTime OrderDate { get; set; }
         public DateTime CompletionDate { get; set; }
-        public int CustomerId { get; set; }
-        public virtual Customer Customer { get; set; } 
-        public int CartId { get; set; }
-        public DbSet<Cart>  Cart { get; set; }
+        public int Items { get; set; }
+        public double Discount { get; set; }
+        public double Total { get; set; }
+        public double VAT { get; set; }
+        public string CartUserId { get; set; }
     }
 }

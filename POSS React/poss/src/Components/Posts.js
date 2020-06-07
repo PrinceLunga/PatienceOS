@@ -10,7 +10,7 @@ import React, { Component } from 'react';
     }
 
     componentWillMount(){
-        fetch('https://localhost:44374/api/Products')
+        fetch('https://localhost:5001/api/Products/GetProducts')
         .then( res => res.json())
         .then( data => this.setState({posts: data}));
     }
@@ -22,6 +22,9 @@ import React, { Component } from 'react';
            
 
         <table>
+            <thead>
+                
+            </thead>
                 <tr>
                     <td>
                         <p>{post.id} |</p>
@@ -38,6 +41,22 @@ import React, { Component } from 'react';
 
                     <td>
                     <p>{post.status}</p>
+                    </td>
+
+                    <td>
+                    <p>{post.quantity}</p>
+                    </td>
+
+                    <td>
+                    <p>{post.price}</p>
+                    </td>
+
+                    <td>
+                    <p>{post.desription}</p>
+                    </td>
+
+                    <td>
+                    <p>{post.image}</p>
                     </td>
                 </tr>
         </table>

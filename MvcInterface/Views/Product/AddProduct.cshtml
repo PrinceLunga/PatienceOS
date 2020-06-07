@@ -1,0 +1,79 @@
+﻿@model POSSMvc.Models.ProductModel
+@{
+    ViewBag.Title = "Patience Online Shopping";
+    Layout = "~/Views/Shared/_HomepageLayout.cshtml";
+}
+
+<h2>Add a Product <a asp-action="Index" class="btn btn-sm btn-secondary">Back</a></h2>
+<form asp-action="AddProduct" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description" class="control-label"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Group" class="control-label"></label>
+        <input asp-for="Group" class="form-control" />
+        <span asp-validation-for="Group" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SubGroup" class="control-label"></label>
+        <input asp-for="SubGroup" class="form-control" />
+        <span asp-validation-for="SubGroup" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Status" class="control-label"></label>
+        <input asp-for="Status" class="form-control" />
+        <span asp-validation-for="Status" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity" class="control-label"></label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price" class="control-label"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Image" class="control-label"></label>
+        <input name="Image" type="file" class="btn btn-microsoft">
+        @*<input asp-for="Image" type="file" class="btn btn-microsoft">*@
+
+    </div>
+
+
+    <div class="text-center panel-body">
+        <button type="submit" class="btn btn-sm btn-primary">Add Product</button>
+    </div>
+</form>
+
+@if (Model != null)
+{
+    <h2>Product</h2>
+    <table class="table table-sm table-striped table-bordered m-2">
+        <thead><tr><th>ID</th><th>Name</th><th>Description</th><th>Group</th> <th>SubGroup</th> <th>Status</th> <th>Price</th> <th>Quantity</th> <th>Image</th></tr></thead>
+        <tbody>
+            <tr>
+                <td>@Model.Id</td>
+                <td>@Model.Name</td>
+                <td>@Model.Description</td>
+                <td>@Model.Group</td>
+                <td>@Model.SubGroup</td>
+                <td>@Model.Status</td>
+                <td>@Model.Price</td>
+                <td>@Model.Quantity</td>
+                <td>
+                    <img src="@ViewBag.ImgPath" alt="@Model.Image" height="100" width="100" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}

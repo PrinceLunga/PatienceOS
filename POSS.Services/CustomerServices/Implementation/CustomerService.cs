@@ -28,7 +28,6 @@ namespace POSS.Services.CustomerServices.Implementation
                         CellNumber = s.CellNumber,
                         Username = s.Username,
                         Address = s.Address,
-                        CreatedBy = "Prince Lunga",
                         DateOfBirth = s.DateOfBirth,
                         EmailAddress = s.EmailAddress,
                         Password = s.Password
@@ -69,7 +68,6 @@ namespace POSS.Services.CustomerServices.Implementation
                        EmailAddress = model.EmailAddress,
                        CellNumber = model.CellNumber,
                        Password = model.Password,
-                       CreatedBy = "Prince Lunga",
                        DateCreated = DateTime.Now,
                        DateOfBirth = model.DateOfBirth
                     };

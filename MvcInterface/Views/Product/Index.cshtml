@@ -1,0 +1,83 @@
+﻿@model IEnumerable<MvcInterface.Models.Product>
+@{
+    ViewBag.Title = "Patience Online Shopping";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+<div class="row">
+    @foreach (var m in Model)
+    {
+
+        <div class="col-md-4">
+            <div class="row">
+                <h4><span id="Name" style="color:darkred">@m.Name</span></h4>
+                <p><span class="glyphicon glyphicon-heart" style="color:red;pointer-events:fill" contextmenu="Added To WishList"></span></p>
+
+
+            </div>
+
+
+            <a asp-controller="Cart" asp-action="AddItemToCart" asp-route-id="@m.Id">
+
+                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(m.Image))" style="overflow: hidden; position: relative; width:200px; height:200px; cursor:pointer">
+            </a>
+
+            <a>
+                <h4> Price: R <span id="Price" style="color:darkred">@m.Price</span></h4>
+            </a>
+            <a>
+                <h4> Available In Stock  <span id="Price" style="color:darkred">@m.Quantity</span></h4>
+            </a>
+
+            <p><a class="btn btn-default" href="">View More &raquo;</a><p><span class="glyphicon glyphicon-shopping-cart" style="color:green"></span></p>
+            </p>
+        </div>
+
+    }
+</div>
+
+@*<h2>All Items</h2>
+    <a asp-action="AddItem" class="btn btn-sm btn-primary">Add Item</a>
+    <a asp-action="GetItem" class="btn btn-sm btn-secondary">Get Item</a>
+    <table class="table table-sm table-striped table-bordered m-2">
+        <thead><tr><th>ID</th><th>Name</th><th>Group</th><th>Sub Group</th><th>Status</th><th>Price</th><th>Quantity</th> <th>Image</th><th>Actions</th></tr></thead>
+        <tbody>
+            @foreach (var r in Model)
+            {
+                <tr>
+                    <td>@r.Id</td>
+                    <td>@r.Name</td>
+                    <td>@r.Group</td>
+                    <td>@r.SubGroup</td>
+                    <td>@r.Status</td>
+                    <td>@r.Price</td>
+                    <td>@r.Quantity</td>
+                    <td>@r.Description</td>
+                    <td>
+                        @r.Description
+                    </td>
+                    <td>
+                        @{
+                            var base64 = Convert.ToBase64String(r.Image);
+                            var imgsrc = String.Format("data:image/gif;base64,{0}", base64);
+                        }
+                        <img src="@imgsrc" width="400" height="200" />
+                    </td>
+                    <td>
+                        <a asp-action="UpdateProduct" class="btn btn-sm btn-primary" asp-route-id="@r.Id">Update Item</a>
+                    </td>
+                    <td>
+                        <a asp-controller="Cart" asp-action="AddItemToCart" asp-route-id="@r.Id"> Add to Cart</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>*@

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace POSS.DataAccess.DataModels
 {
-    public class Customer
+    public class Customer 
     {
         [Key]
         public int Id { get; set; }
@@ -17,7 +17,6 @@ namespace POSS.DataAccess.DataModels
         public string Username { get; set; }
         public string Password { get; set; }
         public DateTime DateCreated { get; set; }
-        public string CreatedBy { get; set; }
         public DateTime DateModified { get; set; }
         public string ModifiedBy { get; set; }
         public DateTime EndDate { get; set; }

@@ -16,8 +16,12 @@ using POSS.Services.Implementation;
 using POSS.Services.Interfaces;
 using POSS.Services.OrderServices.Implementation;
 using POSS.Services.OrderServices.Interface;
+using POSS.Services.PaymentService.Implementation;
+using POSS.Services.PaymentService.Interface;
 using POSS.Services.SubGroupServices.Implementation;
 using POSS.Services.SubGroupServices.Interface;
+using POSS.Services.TransactionService.Implementation;
+using POSS.Services.TransactionService.Interface;
 
 namespace POSS
 {
@@ -53,6 +57,8 @@ namespace POSS
             services.AddScoped<ISubGroupLogic, SubGroupLogic>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<ICartService, CartService>();
+            services.AddScoped<IPaymentService, PaymentService>();
+            services.AddScoped<ITransactionService, TransactionService>();
 
             //Google Authentication
             services.AddAuthentication(options =>

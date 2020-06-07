@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\Helpers\\Helpers.csproj": {}
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\Helpers\\Helpers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\Helpers\\Helpers.csproj": {
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\Helpers\\Helpers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\Helpers\\Helpers.csproj",
+        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\Helpers\\Helpers.csproj",
         "projectName": "Helpers",
-        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\Helpers\\Helpers.csproj",
+        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\Helpers\\Helpers.csproj",
         "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\Helpers\\obj\\",
+        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\Helpers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -52,12 +52,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

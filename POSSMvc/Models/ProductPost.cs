@@ -29,6 +29,8 @@ namespace POSSMvc.Models
         [DataMember]
         public String Price { get; set; }
         [DataMember]
+        public double Vat { get; set; }
+        [DataMember]
         public String Quantity { get; set; }
     }
 }

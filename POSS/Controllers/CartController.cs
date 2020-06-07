@@ -5,9 +5,7 @@ using POSS.Services.CartServices.Interface;
 using POSS.Models.Cart;
 using POSSModels;
 using POSS.DataAccess.DataModels;
-using Microsoft.AspNetCore.Http;
-using javax.swing.text;
-using System;
+
 
 namespace POSS.Controllers
 {
@@ -64,7 +62,5 @@ namespace POSS.Controllers
             return RedirectToAction("GetShopppingCartByUser");
            
         }
-
-
     }
 }

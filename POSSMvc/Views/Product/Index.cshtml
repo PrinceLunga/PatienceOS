@@ -27,22 +27,13 @@
                     var imgsrc = String.Format("data:image/gif;base64,{0}", base64);
                 }
                 <img src="@imgsrc" width="400" height="200" />
-
-                @*<img src="~/images/@r.Image"
-        class="rounded-circle"
-        height="40" width="40"
-        asp-append-version="true" />*@
             </td>
-            @*<td>@r.Status</td>*@
-            <td>
-                <a asp-action="UpdateProduct" asp-route-id="@r.Id"><img src="/icon/edit.png" /></a>
-            </td>
-            <td>
-                <form asp-action="DeleteReservation" method="post">
-                    <input type="hidden" value="@r.Id" name="ReservationId" />
-                    <input type="image" src="/icon/close.png" />
-                </form>
-            </td>
+        <td>
+            <a asp-action="UpdateProduct" class="btn btn-sm btn-primary" asp-route-id="@r.Id">Update Item</a>
+        </td>
+        <td>
+            <a asp-controller="Cart" asp-action="AddItemToCart"  asp-route-id="@r.Id"> Add to Cart</a>
+        </td>
         </tr>
         }
     </tbody>

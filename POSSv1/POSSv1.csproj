@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-POSSv1-66819805-5870-46E8-B7C2-F3BEC0924CBE</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureADB2C.UI" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.4" />
+    <PackageReference Include="Microsoft.Net.Compilers" Version="3.6.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\POSS.DataAccess\POSS.DataAccess.csproj" />
+    <ProjectReference Include="..\POSS.Services\POSS.Services.csproj" />
+  </ItemGroup>
+
+</Project>

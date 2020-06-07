@@ -1,0 +1,212 @@
+﻿@model IEnumerable<MvcInterface.Models.Product>
+
+@{
+    ViewBag.Title = "Patience Online Shopping";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+
+@using Microsoft.Extensions.Options
+@inject IOptions<MvcInterface.Models.StripeSettings> Stripe
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<h1>Shopping Cart Items</h1>
+@{
+    double sum = 0;
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .label {
+        font-size: 10pt;
+        font-weight: bold;
+        font-family: Arial;
+    }
+
+    .contents {
+        border: 1px dotted black;
+        padding: 5px;
+        width: 300px;
+    }
+
+    .name {
+        color: #18B5F0;
+    }
+
+    .left {
+        float: left;
+        width: 50px;
+        height: 50px;
+    }
+
+    .right {
+        margin-left: 60px;
+        line-height: 50px;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    #footer {
+        position: fixed;
+        bottom: 0px;
+        height: 3px;
+        background-color: #666;
+        color: #eee;
+        width: 100%
+    }
+</style>
+<script type="text/javascript">
+    $(function () {
+        $("#btnPrint").click(function () {
+            var contents = $("#dvContents").html();
+            var frame1 = $('<iframe />');
+            frame1[0].name = "frame1";
+            frame1.css({ "position": "absolute", "top": "-1000000px" });
+            $("body").append(frame1);
+            var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
+            frameDoc.document.open();
+            //Create a new HTML document.
+            frameDoc.document.write('<html><head><title>DIV Contents</title>');
+            frameDoc.document.write('</head><body>');
+            //Append the external CSS file.
+            frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" />');
+            //Append the DIV contents.
+            frameDoc.document.write(contents);
+            frameDoc.document.write('</body></html>');
+            frameDoc.document.close();
+            setTimeout(function () {
+                window.frames["frame1"].focus();
+                window.frames["frame1"].print();
+                frame1.remove();
+            }, 500);
+        });
+    });
+</script>
+
+
+@if (Model.Any())
+{
+
+<div id="dvContents">
+
+    <table class="table table-hover" width="100%">
+        <thead>
+            @*<img src="~/Templates/Header.jpg" width="100%" height="70px" />*@
+            <tr>
+
+                <th>Category</th>
+                <th>Department</th>
+
+                <th>Image</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+
+                    <td>@x.SubGroup</td>
+                    <td>@x.Group</td>
+                    <td>
+
+                        <img id="img1" src="data:image/jpeg;base64,@(Convert.ToBase64String(x.Image))" height="100" width="75" />
+
+                    </td>
+                    <td>R @x.Price</td>
+                    <td>@x.Quantity</td>
+
+                    <td>
+                        @*<a asp-action="UpdateProduct" class="btn btn-sm btn-primary" asp-route-id="@r.Id">Update Item</a>*@
+                        <a asp-controller="Cart" asp-action="RemoveCartItem" asp-route-id="@x.Id">
+                            <span class="glyphicon btn-danger"></span>Remove
+                        </a>
+                    </td>
+                </tr>
+
+            }
+
+        </tbody>
+
+        @foreach (var x in Model)
+        {
+            sum = x.Total;
+
+        }
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+
+                <td><b>Total</b></td>
+                <td>
+                    R @sum
+                </td>
+            </tr>
+
+        </tfoot>
+
+    </table>
+
+    <button type="button" id="btnPrint" class="btn btn-primary">Print</button>
+    @*<button type="button" class="btn btn-success">Continue Shopping</button>*@
+    <a id="btn_add" href="@Url.Action("Index", "Product")" class="btn btn-info btn-lg" style="margin-left:40px">
+        <span class="glyphicon glyphicon-eye-open"></span> Continue shopping
+    </a>
+
+
+    <form asp-action="Charge" asp-controller="Cart" method="post">
+        <label>Amount : R500</label>
+        <script src="//checkout.stripe.com/v2/checkout.js"
+                class="stripe-button"
+                data-key="@Stripe.Value.PublishableKey"
+                data-local="auto"
+                data-description="Patience Online Shopping"
+                data-amount="500">
+        </script>
+    </form>
+    @*<button type="button" class="btn btn-warning">Check Out</button>*@
+
+</div>
+
+}
+else
+{
+    <div id="dvContents">
+
+        <p><h4>You do not have any item on your Cart, click on continue shopping to add items</h4></p>
+        <button type="button" id="btnPrint" class="btn btn-primary">Print</button>
+        <a id="btn_add" href="@Url.Action("Index", "Product")" class="btn btn-info btn-lg" style="margin-left:60px">
+            <span class="glyphicon glyphicon-eye-open"></span> Continue shopping
+        </a>
+
+
+        <form asp-action="Charge" asp-controller="Cart" method="post">
+            <label>Amount : R500</label>
+            <script src="//checkout.stripe.com/v2/checkout.js"
+                    class="stripe-button"
+                    data-key="@Stripe.Value.PublishableKey"
+                    data-local="auto"
+                    data-description="Patience Online Shopping"
+                    data-amount="500">
+            </script>
+        </form>
+
+        @*<button type="button" class="btn btn-warning">Check Out</button>*@
+    </div>
+    <script type="text/javascript">
+        alert("Looks like your cart is empty ");
+    </script>
+}

@@ -5252,11 +5252,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSConsole\\POSSConsole.csproj",
+      "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSConsole\\POSSConsole.csproj",
       "projectName": "POSSConsole",
-      "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSConsole\\POSSConsole.csproj",
+      "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSConsole\\POSSConsole.csproj",
       "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\PatienceOS\\PatienceOS\\POSSConsole\\obj\\",
+      "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSConsole\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -5303,12 +5303,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.2, 3.1.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

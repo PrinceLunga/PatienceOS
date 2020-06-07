@@ -11,13 +11,14 @@ namespace POSS.Models.Cart
     {
         [Key]
         public int Id { get; set; }
-        public int NumberOfItems { get; set; }
-        public double Total { get; set; }
+        public string UserCartId { get; set; }
+        public int Quantity { get; set; }
+        public double Price { get; set; }
         public double Discount { get; set; }
         public DateTime DateCreated { get; set; }
         public int ProductId { get; set; }
-        public ProductModel Product { get; set; }
+        public virtual ProductModel Product { get; set; }
         public int CustomerId { get; set; }
-        public CustomerModel Customer { get; set; }
+        public virtual CustomerModel Customer { get; set; }
     }
 }

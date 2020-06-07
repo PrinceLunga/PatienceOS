@@ -1,12 +1,15 @@
 ﻿using POSS.DataAccess.Context;
 using POSS.DataAccess.DataModels;
+using POSS.DataAccess.ProductModels;
 using POSS.Models.Cart;
 using POSS.Models.Order;
 using POSS.Services.OrderServices.Interface;
+using POSS.Services.CartServices.Implementation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using POSSModels;
 
 namespace POSS.Services.OrderServices.Implementation
 {
@@ -28,19 +31,16 @@ namespace POSS.Services.OrderServices.Implementation
                    if(order != null)
                    {
                         order.Id = model.Id;
-                        order.Number = model.Number;
-                        order.Description = model.Description;
-                        order.Status = model.Status;
+                        order.CartUserId = model.CartUserId;
                         order.OrderDate = model.OrderDate;
-                        order.CompletionDate = DateTime.Now;
-                        order.CustomerId = model.CustomerId;
-                        order.CartId = model.CartId;
-
+                        order.Status = "Delivered";
+                        order.CompletionDate = model.CompletionDate;
+                        
                     }
 
                     dbContext.SaveChanges();
                 }
-                return $"Order {model.Number} has been completed succesfully !";
+                return $"Order has been delivered succesfully !";
             }
             catch (Exception ex)
             {
@@ -48,48 +48,106 @@ namespace POSS.Services.OrderServices.Implementation
                 return ex.Message.ToString();
             }
         }
-        public string CreateOrder(OrderModel model, string username)
+        public string CreateOrder( List<ProductModel> model, string username)
         {
+            double Total = 0;
+            ProductModel localModel = null;
+            double Discount = 0D;
+            string CartResults = "";
+            int numberOfItems = 0;
             try
             {
                 using(dbContext)
                 {
+                    numberOfItems = model.Count;
                     int CustomerId = dbContext.Customers.Where(x => x.Username == username).SingleOrDefault().Id;
+                    foreach (var item in model)
+                    {
+                        localModel = item;
+                        Total += item.Price;
+                        Discount += item.Discount;
+                    }
                     var order = new Order
                     {
-                        Id = model.Id,
-                        Status = model.Status,
-                        Number = model.Number,
-                        Description = model.Description,
-                        CustomerId = CustomerId,
+                        Status = "Created",
                         OrderDate = DateTime.Now,
-                        CartId = model.CartId
-                    };
-                    dbContext.Orders.Add(order);
-                    dbContext.SaveChanges();
+                        Discount = Discount,
+                        Total = Total,
+                        VAT = localModel.Vat,
+                        Items = numberOfItems
+                     };
+
+
+                    //Proceed and Save a new Order
+                    if (CartResults.Contains("Item"))
+                    {
+                        dbContext.Orders.Add(order);
+                        dbContext.SaveChanges();
+                    }
+
+
                 }
-                return $"Order for {model.Customer.Fullnames} successfully created !";
+                return $"Order successfully created !";
             }
             catch (Exception ex)
             {
                 return ex.Message.ToString();
             }
         }
+
+        public OrderModel CreateOrder(OrderModel model)
+        { 
+            try
+            {
+                using (dbContext)
+                {
+                    if (model != null)
+                    {
+                        var order = new Order
+                        {
+                            Id = model.Id,
+                            Status = "Created",
+                            Discount = model.Discount,
+                            Items = model.Items,
+                            OrderDate = DateTime.Now,
+                            Total = model.Total,
+                            VAT = model.VAT,
+                            CartUserId = model.CartUserId
+                        };
+
+                        dbContext.Add(order);
+                        dbContext.SaveChanges();
+                        return model;
+                    }
+                    else
+                        return null;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception();
+            }
+           
+        }
+
         public OrderModel FindOrder(OrderModel model)
         {
             using(dbContext)
             {
-                return dbContext.Orders.Where(x => x.Id == model.Id || x.CustomerId == model.CustomerId)
+                return dbContext.Orders.Where(x => x.Id == model.Id || x.CartUserId == model.CartUserId)
                     .Select( z => new OrderModel 
                     { 
                         Id = z.Id,
-                        Description = z.Description,
-                        CustomerId = z.CustomerId,
-                        Number = z.Number,
                         Status = z.Status,
                         OrderDate = z.OrderDate,
                         CompletionDate = z.CompletionDate,
-                        CartId = z.CartId
+                        CartUserId = z.CartUserId,
+                        VAT = z.VAT,
+                        Total = z.Total,
+                        Items = z.Items,
+                        Discount = z.Discount
+
                     }).SingleOrDefault();
             }
         }
@@ -101,15 +159,31 @@ namespace POSS.Services.OrderServices.Implementation
                 return dbContext.Orders.Select(x => new OrderModel
                 {
                     Id = x.Id,
-                    CartId = x.CartId,
-                    CustomerId = x.CustomerId,
-                    Description = x.Description,
-                    Number = x.Number,
+                    CartUserId = x.CartUserId,
                     OrderDate = x.OrderDate,
                     Status = x.Status,
-                    Type = x.Type
+                    Items = x.Items,
+                    Discount = x.Discount,
+                    Total = x.Total,
+                    VAT = x.VAT
+
                 }).ToList();
             }
+        }
+
+        public string SendInvoice(string Username, int OrderId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string SetShippingAddress(string Username)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string SetWrappingOptions()
+        {
+            throw new NotImplementedException();
         }
 
         public string UpdateOrder(OrderModel model)
@@ -118,19 +192,17 @@ namespace POSS.Services.OrderServices.Implementation
             {
                 using (dbContext)
                 {
-                    var order = dbContext.Orders.Where(x => x.Number == model.Number || x.CustomerId == model.CustomerId).SingleOrDefault();
+                    var order = dbContext.Orders.Where(x =>  x.CartUserId == model.CartUserId).SingleOrDefault();
 
                     if (order != null)
                     {
                         order.Id = model.Id;
-                        order.Number = model.Number;
                         order.OrderDate = model.OrderDate;
                         order.Status = model.Status;
-                        order.Description = model.Description;
 
                         dbContext.SaveChanges();
                     }
-                    return $"Order {order.Number} has been updated succesfully !";
+                    return $"Order  has been updated succesfully !";
                 }
             }
             catch (Exception ex)

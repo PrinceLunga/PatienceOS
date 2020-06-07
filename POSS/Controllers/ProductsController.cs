@@ -1,17 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
-using POSS.DataAccess.Context;
-using POSS.DataAccess.ProductModels;
-using POSS.Models.Product;
-using POSS.Services.Implementation;
 using POSS.Services.Interfaces;
 using POSSModels;
 
