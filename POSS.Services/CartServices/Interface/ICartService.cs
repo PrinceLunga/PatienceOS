@@ -10,12 +10,13 @@ namespace POSS.Services.CartServices.Interface
     public interface ICartService
     {
         public CartModel AddToCart(AddToCartModel model);
-        public string UpdateCart(CartModel model);
-        public List<ProductModel> ViewCustomerCart(string Username);
+        public List<ViewCustomerCartModel> ViewCustomerCart(string Username);
         public string RemoveFromCart(int Id, string Username);
         public int GetCustomerId(string username);
         public void ClearCart();
         public double GetShoppingCartTotal();
         public List<CartModel> GetShoppingCartItems();
+       public void UpdateCartItem(UpdateCartModel model);
+       public  bool CartItemExists(int id);
     }
 }

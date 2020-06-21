@@ -55,50 +55,53 @@ namespace MvcInterface.Controllers
         public ViewResult AddProduct() => View();
 
         [HttpPost]
-        public async Task<IActionResult> AddProduct([FromForm] ProductModel product, CancellationToken cancellationToken)
+        public async Task<IActionResult> AddProduct([FromForm] ProductModel product)
         {
+
             string Url = "https://localhost:44374/api/Products/PostProduct";
             using (var client = new HttpClient())
             {
                 //var a = Object;
-                 string Image = "";
-                 MultipartFormDataContent multiContent = new MultipartFormDataContent();
+                string Image = "";
+                MultipartFormDataContent multiContent = new MultipartFormDataContent();
 
-                 using (var memoryStream = new MemoryStream())
-                 {
-                     await product.Image.CopyToAsync(memoryStream);
-                     var a = memoryStream.ToArray();
-                     Image = Convert.ToBase64String(a);
+                using (var memoryStream = new MemoryStream())
+                {
+                    await product.Image.CopyToAsync(memoryStream);
+                    var a = memoryStream.ToArray();
+                    Image = Convert.ToBase64String(a);
 
-                 }
+                }
                 var response = new HttpResponseMessage();
 
-                var PostProduct = new ProductPost
-                {
-                    Id = product.Id,
-                    Description = product.Description,
-                    Group = product.Group,
-                    Image = Image,
-                    Name = product.Name,
-                    Price = product.Price,
-                    Quantity = product.Quantity,
-                    Status = product.Status,
-                    SubGroup = product.SubGroup,
-                    Vat = 15.00
-                };
+                //double price = Convert.ToDouble(product.Price);
+                var PostProduct = new ProductPost();
+                PostProduct.Description = product.Description;
+                PostProduct.Group = product.Group;
+                PostProduct.Image = Image;
+                PostProduct.Name = product.Name;
+                PostProduct.Price = product.Price;
+                PostProduct.Quantity = product.Quantity;
+                PostProduct.Status = product.Status;
+                PostProduct.SubGroup = product.SubGroup;
+                PostProduct.Vat = 15.00;
+                PostProduct.Discount = 0.00;
+                PostProduct.DateCreated = DateTime.Now;
 
                 var formDataContent = new MultipartFormDataContent();
-                formDataContent.Add(new StringContent(PostProduct.Image), "image");
+                formDataContent.Add(new StringContent(PostProduct.Image), "Image");
                 formDataContent.Add(new StringContent(PostProduct.Name), "name");
                 formDataContent.Add(new StringContent(PostProduct.Description), "description");
                 formDataContent.Add(new StringContent(PostProduct.Group), "group");
                 formDataContent.Add(new StringContent(PostProduct.SubGroup), "subGroup");
                 formDataContent.Add(new StringContent(PostProduct.Status), "status");
-                formDataContent.Add(new StringContent(PostProduct.Price), "price");
+                formDataContent.Add(new StringContent(PostProduct.Price.ToString()), "price");
                 formDataContent.Add(new StringContent(PostProduct.Quantity), "quantity");
-                formDataContent.Add(new StringContent(PostProduct.Vat.ToString()), "Vat");
+                formDataContent.Add(new StringContent(PostProduct.Vat.ToString()), "vat");
+                formDataContent.Add(new StringContent(PostProduct.Discount.ToString()), "discount");
+                formDataContent.Add(new StringContent(PostProduct.DateCreated.ToString()), "datecreated");
 
-                response = await client.PostAsync(Url.ToString(), formDataContent);
+                response = await client.PostAsync("https://localhost:44374/api/Products/PostProduct", formDataContent);
 
                 var data = await response.Content.ReadAsStringAsync();
                 response.EnsureSuccessStatusCode();
@@ -121,7 +124,7 @@ namespace MvcInterface.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdateProduct(UpdateProductcs product)
+        public async Task<IActionResult> UpdateProduct([FromForm] UpdateProductcs product)
         {
             using (var httpClient = new HttpClient())
             {

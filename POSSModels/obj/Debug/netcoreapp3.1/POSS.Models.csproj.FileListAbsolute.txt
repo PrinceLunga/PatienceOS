@@ -19,7 +19,7 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSModels\
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSModels\bin\Debug\netcoreapp3.1\POSS.Models.pdb
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSModels\obj\Debug\netcoreapp3.1\POSS.Models.AssemblyInfoInputs.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSModels\obj\Debug\netcoreapp3.1\POSS.Models.AssemblyInfo.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSModels\obj\Debug\netcoreapp3.1\POSS.Models.csproj.CoreCompileInputs.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSModels\obj\Debug\netcoreapp3.1\POSS.Models.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSModels\obj\Debug\netcoreapp3.1\POSS.Models.pdb
-C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSModels\obj\Debug\netcoreapp3.1\POSS.Models.csproj.CoreCompileInputs.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSModels\obj\Debug\netcoreapp3.1\POSS.Models.csprojAssemblyReference.cache

@@ -40,7 +40,7 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.Servic
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.Services\obj\Debug\netcoreapp3.1\POSS.Services.csprojAssemblyReference.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.Services\obj\Debug\netcoreapp3.1\POSS.Services.AssemblyInfoInputs.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.Services\obj\Debug\netcoreapp3.1\POSS.Services.AssemblyInfo.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.Services\obj\Debug\netcoreapp3.1\POSS.Services.csproj.CoreCompileInputs.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.Services\obj\Debug\netcoreapp3.1\POSS.Services.csproj.CopyComplete
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.Services\obj\Debug\netcoreapp3.1\POSS.Services.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.Services\obj\Debug\netcoreapp3.1\POSS.Services.pdb
-C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.Services\obj\Debug\netcoreapp3.1\POSS.Services.csproj.CoreCompileInputs.cache

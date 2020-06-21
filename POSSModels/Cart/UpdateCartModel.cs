@@ -7,7 +7,7 @@ using System.Text;
 
 namespace POSS.Models.Cart
 {
-    public class CartModel
+    public class UpdateCartModel
     {
         [Key]
         public int Id { get; set; }

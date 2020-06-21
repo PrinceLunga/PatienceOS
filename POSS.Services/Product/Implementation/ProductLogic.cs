@@ -25,8 +25,9 @@ namespace POSS.Services.Implementation
         {
             try
             {
-                using(dbContext)
+                using (dbContext)
                 {
+      
                     var product = new Product
                     {
                         Id = model.Id,
@@ -35,11 +36,13 @@ namespace POSS.Services.Implementation
                         Group = model.Group,
                         SubGroup = model.SubGroup,
                         Image = model.Image,
-                        Price = model.Price,
+                        Price = Convert.ToDouble(model.Price.ToString()),
                         Quantity = model.Quantity,
                         Status = "InStock",
                         CreatedBy = "Prince Lunga",
-                        DateCreated = DateTime.Now
+                        DateCreated = DateTime.Now,
+                        Discount = model.Discount,
+                        Vat = model.Vat
                     };
 
                     dbContext.Products.Add(product);
@@ -113,7 +116,7 @@ namespace POSS.Services.Implementation
                     product.SubGroup = model.SubGroup;
                     product.Status = model.Status;
                     product.ModifiedBy = "Current User";
-                    product.Price = model.Price;
+                    product.Price = Convert.ToDouble(model.Price);
                     product.Quantity = Convert.ToInt32(model.Quantity);
                     product.DateModified = DateTime.Now;
                     product.Description = model.Description;

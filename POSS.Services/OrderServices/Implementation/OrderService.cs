@@ -64,7 +64,7 @@ namespace POSS.Services.OrderServices.Implementation
                     foreach (var item in model)
                     {
                         localModel = item;
-                        Total += item.Price;
+                        Total += Convert.ToDouble(item.Price);
                         Discount += item.Discount;
                     }
                     var order = new Order

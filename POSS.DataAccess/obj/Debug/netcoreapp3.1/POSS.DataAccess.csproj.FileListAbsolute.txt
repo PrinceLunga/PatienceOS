@@ -31,8 +31,8 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAc
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.csprojAssemblyReference.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.AssemblyInfoInputs.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.AssemblyInfo.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.csproj.CopyComplete
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.pdb
-C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.genruntimeconfig.cache

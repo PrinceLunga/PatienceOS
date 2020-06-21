@@ -39,6 +39,8 @@ namespace POSS
         {
             services.AddCors();
             services.AddControllers();
+            services.AddControllersWithViews();
+            services.AddResponseCompression();
 
             //Allow CORS from anywhere
             services.AddCors(c =>

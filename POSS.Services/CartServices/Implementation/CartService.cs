@@ -20,14 +20,14 @@ namespace POSS.Services.CartServices.Implementation
         private Cart cartItem;
         public string UserCartId = null;
         public ServiceProvider service;
-        private List<ProductModel> products = null;
+        private List<ViewCustomerCartModel> customerProducts = null;
        // public static string ShoppingCartId { get; set; }
        
         public CartService(POSSDbContext _dbContext)
         {
             dbContext = _dbContext;
             cartItem = new Cart();
-            products = new List<ProductModel>();
+            customerProducts = new List<ViewCustomerCartModel>();
         }
 
         //Add a product to a shopping using as Id specified as a parameter
@@ -40,7 +40,7 @@ namespace POSS.Services.CartServices.Implementation
                     
                     if (model.Username != null)
                     {
-                        cartItem = dbContext.Carts.SingleOrDefault(c => c.ProductId == model.Id && c.UserCartId == model.Username);
+                        cartItem = dbContext.Carts.SingleOrDefault(c => c.ProductId == model.Id && c.UserCartId == model.Username && c.Status.Equals("Added"));
                     }
 
                     //Find the product on the cart
@@ -56,6 +56,7 @@ namespace POSS.Services.CartServices.Implementation
                             ProductId = model.Id,
                             UserCartId = model.Username,
                             Quantity = 1,
+                            Status = "Added",
                             DateCreated = DateTime.Now,
                             Price = product.Price,
                             Discount = 0.00                       
@@ -122,18 +123,13 @@ namespace POSS.Services.CartServices.Implementation
            
         }
 
-        public string UpdateCart(CartModel model)
-        {
-            throw new NotImplementedException();
-        }
-
         // View Customer's shopping using their username
-        public List<ProductModel> ViewCustomerCart(string Username)
+        public List<ViewCustomerCartModel> ViewCustomerCart(string Username)
         {
             using(dbContext)
             {
                 double Total = 0;
-                var cartItem = dbContext.Carts.Where(s => s.UserCartId == Username).Select(x => new CartModel
+                var cartItem = dbContext.Carts.Where(s => s.UserCartId == Username && s.Status != "Checked-Out" ).Select(x => new CartModel
                 {
                     Id = x.Id,
                     UserCartId = x.UserCartId,
@@ -148,7 +144,7 @@ namespace POSS.Services.CartServices.Implementation
                 {
                   Total += product.Price * product.Quantity;
 
-                  var productResults = dbContext.Products.Where(c => c.Id == product.ProductId).Select(x => new ProductModel
+                  var productResults = dbContext.Products.Where(c => c.Id == product.ProductId).Select(x => new ViewCustomerCartModel
                   {
                       Id = x.Id,
                       Description = x.Description,
@@ -165,9 +161,9 @@ namespace POSS.Services.CartServices.Implementation
 
                   }).SingleOrDefault();
 
-                    products.Add(productResults);
+                    customerProducts.Add(productResults);
                 }
-                return products.ToList();
+                return customerProducts.ToList();
             }
         }
 
@@ -211,6 +207,31 @@ namespace POSS.Services.CartServices.Implementation
                     total += dbContext.Products.SingleOrDefault(c => c.Id == cartItem.ProductId).Price;
                 }
                 return total;
+            }
+        }
+
+
+        //Update CartItem Status 
+        public void UpdateCartItem(UpdateCartModel model)
+        {
+            using(dbContext)
+            {
+                var cartItemForUpdate = dbContext.Carts.Where( x=>x.ProductId == model.Id && x.Status.Equals("Added")).SingleOrDefault();
+                cartItemForUpdate.Status = model.Status;
+                dbContext.SaveChanges();
+            }
+        }
+
+        //Check if Cart Item Exists
+        public bool CartItemExists(int id)
+        {
+           using(dbContext)
+            {
+                var cartItem = dbContext.Carts.Where(x => x.Id == id && x.Status == "Added").SingleOrDefault();
+                if (cartItem == null)
+                    return false;
+                else
+                    return true;
             }
         }
     }

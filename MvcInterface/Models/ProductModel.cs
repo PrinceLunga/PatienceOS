@@ -14,6 +14,7 @@ namespace MvcInterface.Models
     {
 
         [Key]
+        [DataMember]
         public string Id { get; set; }
         [DataMember]
         public String Name { get; set; }
@@ -28,10 +29,16 @@ namespace MvcInterface.Models
         [DataMember]
         public IFormFile Image { get; set; }
         [DataMember]
-        public String Price { get; set; }
+        public double Price { get; set; }
         [DataMember]
         public double VAt { get; set; }
         [DataMember]
         public String Quantity { get; set; }
+        [DataMember]
+        public double Discount { get; set; }
+        [DataMember]
+        public String CreatedBy { get; set; }
+        [DataMember]
+        public DateTime DateCreated { get; set; }
     }
 }

@@ -44,7 +44,7 @@ namespace POSS.Controllers
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
         [AcceptVerbs("POST", "PUT")]
-        public  ActionResult<ProductModel> PutProduct(int id, [FromBody] ProductModel model)
+        public  ActionResult<ProductModel> PutProduct(int id, ProductModel model)
         {
             try
             {
@@ -74,9 +74,9 @@ namespace POSS.Controllers
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
         [AcceptVerbs("POST")]
-        public  ActionResult<ProductModel> PostProduct([FromForm] ProductModel product)
+        public  ActionResult<ProductModel> PostProduct( [FromForm] ProductModel product)
         {
-            string results =  _context.Add_Product(product);
+             _context.Add_Product(product);
             return product;
         }
 

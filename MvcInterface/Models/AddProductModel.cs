@@ -1,19 +1,18 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Security.Policy;
 using System.Threading.Tasks;
 
 namespace MvcInterface.Models
 {
-
     [DataContract]
-    public class ProductPost
+    public class AddProductModel
     {
-
         [Key]
-        [DataMember]
         public string Id { get; set; }
         [DataMember]
         public String Name { get; set; }
@@ -26,16 +25,17 @@ namespace MvcInterface.Models
         [DataMember]
         public String Status { get; set; }
         [DataMember]
-        public string Image { get; set; }
+        public IFormFile Image { get; set; }
         [DataMember]
-        public double Price { get; set; }
+        public String Price { get; set; }
         [DataMember]
-        public double Vat { get; set; }
-        [DataMember]
-        public double Discount { get; set; }
+        public double VAt { get; set; }
         [DataMember]
         public String Quantity { get; set; }
 
+        [DataMember]
+        public double Discount { get; set; }
+        
         [DataMember]
         public string CreatedBy { get; set; }
         [DataMember]

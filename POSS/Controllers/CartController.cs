@@ -5,7 +5,7 @@ using POSS.Services.CartServices.Interface;
 using POSS.Models.Cart;
 using POSSModels;
 using POSS.DataAccess.DataModels;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace POSS.Controllers
 {
@@ -27,13 +27,13 @@ namespace POSS.Controllers
         }
 
         [HttpGet("{Username}")]
-        public ActionResult<IEnumerable<ProductModel>> GetShoppingCartByUser(string Username)
+        public ActionResult<IEnumerable<ViewCustomerCartModel>> GetShoppingCartByUser(string Username)
         {
             return cartService.ViewCustomerCart(Username);
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<ProductModel>> GetUserCart(AddToCartModel model)
+        public ActionResult<IEnumerable<ViewCustomerCartModel>> GetUserCart(AddToCartModel model)
         {
             return cartService.ViewCustomerCart(model.Username);
         }
@@ -51,6 +51,33 @@ namespace POSS.Controllers
                 return new CartModel();
         }
 
+        [HttpPut("{id}")]
+        [AcceptVerbs("POST", "PUT")]
+        public ActionResult<UpdateCartModel> UpdateCartItem(int id, [FromBody] UpdateCartModel model)
+        {
+            try
+            {
+                if ((model == null) || (model.Id == 0))
+                {
+                    return NotFound();
+                }
+                cartService.UpdateCartItem(model);
+
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CartItemExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return model;
+        }
+
         [HttpPost]
         public ActionResult<ProductModel> RemoveCartItem(AddToCartModel model)
         {
@@ -61,6 +88,11 @@ namespace POSS.Controllers
             cartService.RemoveFromCart(model.Id, model.Username);
             return RedirectToAction("GetShopppingCartByUser");
            
+        }
+
+        private bool CartItemExists(int id)
+        {
+            return cartService.CartItemExists(id);
         }
     }
 }

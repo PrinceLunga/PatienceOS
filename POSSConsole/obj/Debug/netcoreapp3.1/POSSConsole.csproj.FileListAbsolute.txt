@@ -37,11 +37,11 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.csprojAssemblyReference.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.AssemblyInfoInputs.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.AssemblyInfo.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.csproj.CoreCompileInputs.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.csproj.CopyComplete
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.pdb
-C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.csproj.CoreCompileInputs.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.genruntimeconfig.cache
-C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.csprojAssemblyReference.cache

@@ -1,8 +1,23 @@
-﻿@model POSSMvc.Models.ProductModel
+﻿@model MvcInterface.Models.ProductModel
+
 @{
-    ViewBag.Title = "Patience Online Shopping";
-    Layout = "~/Views/Shared/_HomepageLayout.cshtml";
+    ViewData["Title"] = "Add Stock ";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<h1>Add Item(s) for Stock </h1>
+@{
+    double sum = 0;
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 
 <h2>Add a Product <a asp-action="Index" class="btn btn-sm btn-secondary">Back</a></h2>
 <form asp-action="AddProduct" method="post" enctype="multipart/form-data">
@@ -45,8 +60,6 @@
     <div class="form-group">
         <label asp-for="Image" class="control-label"></label>
         <input name="Image" type="file" class="btn btn-microsoft">
-        @*<input asp-for="Image" type="file" class="btn btn-microsoft">*@
-
     </div>
 
 

@@ -12,6 +12,7 @@ using Product = MvcInterface.Models.Product;
 using POSS.Models.Order;
 using System;
 using POSS.DataAccess.DataModels;
+using System.Net.Http.Headers;
 
 namespace MvcInterface.Controllers
 {
@@ -117,33 +118,6 @@ namespace MvcInterface.Controllers
             var order = new OrderModel();
             Email = this.User.Identity.Name;
 
-
-            var customerService = new CustomerService();
-            var chargeService = new ChargeService();
-
-            var customer = customerService.Create(new CustomerCreateOptions
-            {
-                Email = Email,
-                Source = StripeToken
-            });
-
-            var charge = chargeService.Create(new ChargeCreateOptions
-            {
-                Amount = 500,
-                Description = "Patience Online Shopping",
-                Currency = "USD",
-                Customer = "cus_HPLfSKAJuEn0yL"
-            });
-
-            var options = new SetupIntentCreateOptions
-            {
-                Customer = "cus_HPLfSKAJuEn0yL"
-            };
-            var service = new SetupIntentService();
-            var intent = service.Create(options);
-            ViewData["ClientSecret"] = intent.ClientSecret;
-
-
             List<Product> cartItems = new List<Product>();
             using (var httpClient = new HttpClient())
             {
@@ -157,13 +131,12 @@ namespace MvcInterface.Controllers
                 foreach(var item in cartItems)
                 {
                     counter++;
-                
-
                     _items = cartItems.Count;
                     total += item.Price * item.Quantity;
                     discount += item.Discount;
-                   
 
+                    //Update Status
+                    item.Status = "Checked-Out";
                     if (counter == cartItems.Count)
                     {
                         vat = total * 0.15;
@@ -184,6 +157,32 @@ namespace MvcInterface.Controllers
                     }
 
                 }
+
+                var customerService = new CustomerService();
+                var chargeService = new ChargeService();
+
+                var customer = customerService.Create(new CustomerCreateOptions
+                {
+                    Email = Email,
+                    Source = StripeToken
+                });
+
+                var charge = chargeService.Create(new ChargeCreateOptions
+                {
+                    Amount = Convert.ToInt32(total * 100),
+                    Description = "Patience Online Shopping",
+                    Currency = "zar",
+                    Customer = "cus_HPLfSKAJuEn0yL",
+                    
+                });
+
+                var options = new SetupIntentCreateOptions
+                {
+                    Customer = "cus_HPLfSKAJuEn0yL"
+                };
+                var service = new SetupIntentService();
+                var intent = service.Create(options);
+                ViewData["ClientSecret"] = intent.ClientSecret;
 
 
                 //Call create Order
@@ -217,23 +216,64 @@ namespace MvcInterface.Controllers
                     StartTime = DateTime.Now.AddSeconds(1),
                     Success = true,
                     Failure = false,
-                    TransactionName = "Charge",
-                    TriggeredAction = "Charge",
+                    TransactionName = "Cheque Out",
+                    TriggeredAction = "Payment",
                     EndTime = DateTime.Now.AddSeconds(2),
-                    Parameters = $"{Email}|{discount}|{_items}|{DateTime.Now}|Charge|{total}|{vat}"
+                    Parameters = $"|Username|{Email}|Discount|{discount}|NoOfItems|{_items}|{DateTime.Now}|Charge|{total}|{vat}"
                 };
 
                 StringContent Transactioncontent = new StringContent(JsonConvert.SerializeObject(transaction), Encoding.UTF8, "application/json");
                 using (var response = await httpClient.PostAsync("https://localhost:44374/api/Transaction/LogTransaction", Transactioncontent))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
+
+                    if (response.IsSuccessStatusCode == true)
+                    {
+                        //Update Cart Item Status to Checked-Out
+                        foreach(var item in cartItems)
+                        {
+                            
+                            string serailizedCartItem = JsonConvert.SerializeObject(item);
+                            var inputMessage = new HttpRequestMessage
+                            {
+                                Content = new StringContent(serailizedCartItem, Encoding.UTF8, "application/json")
+                            };
+
+                            inputMessage.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                            HttpResponseMessage message = httpClient.PutAsync("https://localhost:44374/api/Cart/UpdateCartItem", inputMessage.Content).Result;
+
+                            if (!message.IsSuccessStatusCode)
+                                throw new ArgumentException(message.ToString());
+
+                            //FInd product to update
+                            var productToUpdate = new UpdateProductcs();
+                            using (var getProductResponse = await httpClient.GetAsync("https://localhost:44374/api/Products/GetProduct/" + item.Id))
+                            {
+                                string apiProductResponse = await getProductResponse.Content.ReadAsStringAsync();
+                                productToUpdate = JsonConvert.DeserializeObject<UpdateProductcs>(apiProductResponse);
+                            }
+                            //Update Quantity
+                            productToUpdate.Quantity -= item.Quantity;
+                            string serailizedProductItem = JsonConvert.SerializeObject(productToUpdate);
+
+                            var inputProductMessage = new HttpRequestMessage
+                            {
+                                Content = new StringContent(serailizedProductItem, Encoding.UTF8, "application/json")
+                            };
+
+                            inputProductMessage.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                            HttpResponseMessage product_message = httpClient.PutAsync("https://localhost:44374/api/Products/PutProduct", inputProductMessage.Content).Result;
+
+                            if (!product_message.IsSuccessStatusCode)
+                                throw new ArgumentException(product_message.ToString());
+
+                        }
+                    }
                 }
-
             }
-
-            return View(charge);
+            return View();
         }
-
-
     }
 }
