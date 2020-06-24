@@ -10,6 +10,8 @@ using Microsoft.Extensions.Hosting;
 using POSS.DataAccess.Context;
 using POSS.Services.CartServices.Implementation;
 using POSS.Services.CartServices.Interface;
+using POSS.Services.DeliveryServices.Implementation;
+using POSS.Services.DeliveryServices.Interface;
 using POSS.Services.GroupService.Implementation;
 using POSS.Services.GroupService.Interface;
 using POSS.Services.Implementation;
@@ -61,6 +63,7 @@ namespace POSS
             services.AddScoped<ICartService, CartService>();
             services.AddScoped<IPaymentService, PaymentService>();
             services.AddScoped<ITransactionService, TransactionService>();
+            services.AddScoped<IDelivery, DeliveryService>();
 
             //Google Authentication
             services.AddAuthentication(options =>

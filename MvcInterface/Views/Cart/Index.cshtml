@@ -75,7 +75,7 @@
             var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
             frameDoc.document.open();
             //Create a new HTML document.
-            frameDoc.document.write('<html><head><title>DIV Contents</title>');
+            frameDoc.document.write('<html><head><title>Patience Online Shopping Invoice</title>');
             frameDoc.document.write('</head><body>');
             //Append the external CSS file.
             frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" />');
@@ -160,6 +160,11 @@
 
     </table>
 
+   
+    @*<button type="button" class="btn btn-warning">Check Out</button>*@
+
+</div>
+<div>
     <button type="button" id="btnPrint" class="btn btn-primary">Print</button>
     @*<button type="button" class="btn btn-success">Continue Shopping</button>*@
     <a id="btn_add" href="@Url.Action("Index", "Product")" class="btn btn-info btn-lg" style="margin-left:60px">
@@ -176,8 +181,6 @@
                 data-local="en">
         </script>
     </form>
-    @*<button type="button" class="btn btn-warning">Check Out</button>*@
-
 </div>
 
 }

@@ -26,6 +26,7 @@ namespace POSS.DataAccess.Context
         public DbSet<Order> Orders { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Delivery> Deliveries { get; set; }
 
        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -58,6 +59,47 @@ namespace POSS.DataAccess.Context
                 Username = "user",
                 Password = "user",
                 Role = "user"
+            });
+
+            //Delivery Test data
+            modelBuilder.Entity<Delivery>().HasData(new Delivery
+            {
+               Id = 1,
+               City = "Cape Town",
+               Complex = "Devon Square",
+               Fullnames = "Prince Thabane Lunga",
+               isResidential = true,
+               PostalCode = "8100",
+               Province = "Western Cape",
+               RecipientMobileNo = "0659779508",
+               StreetAddress = "70 Exeter Road",
+               Suburb = "Plumstead"
+
+            }, new Delivery
+            {
+                Id = 2,
+                City = "Cape Town",
+                Complex = "La rouge",
+                Fullnames = "Rorbet Smith",
+                isResidential = true,
+                PostalCode = "8700",
+                Province = "Western Cape",
+                RecipientMobileNo = "0659779507",
+                StreetAddress = "12 Dor'Chester",
+                Suburb = "Park Lands"
+
+            }, new Delivery
+            {
+                Id = 3,
+                City = "Durban",
+                Complex = "Renaisense",
+                Fullnames = "Siyanda Mlondo",
+                isResidential = true,
+                PostalCode = "4000",
+                Province = "KwaZulu Natal",
+                RecipientMobileNo = "0659229507",
+                StreetAddress = "SF Mfusi Road",
+                Suburb = "Durban"
             });
             //Group Test Data
             modelBuilder.Entity<Group>().HasData(new Group

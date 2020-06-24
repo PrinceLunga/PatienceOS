@@ -217,3 +217,7 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterfac
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\MvcInterface.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\MvcInterface.pdb
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\MvcInterface.genruntimeconfig.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\Delivery\Index.cshtml.g.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\Delivery\AddDeliveryAddress.cshtml.g.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\Delivery\GetCustomerDeliveryAddress.cshtml.g.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\Delivery\UpdateDeliveryAddress.cshtml.g.cs
