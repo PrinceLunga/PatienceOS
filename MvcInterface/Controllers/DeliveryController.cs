@@ -27,7 +27,7 @@ namespace MvcInterface.Controllers
             return View(deliveryList);
         }
 
-        public ViewResult AddGroup() => View();
+        public ViewResult AddDeliveryAddress() => View();
 
         [HttpPost]
         public async Task<IActionResult> AddDeliveryAddress(AddDeliveryAddressModel model)
@@ -36,7 +36,7 @@ namespace MvcInterface.Controllers
             using (var httpClient = new HttpClient())
             {
                 StringContent content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
-                using (var response = await httpClient.PostAsync("https://localhost:44374/api/Delivery/GetCustomerDelivery", content))
+                using (var response = await httpClient.PostAsync("https://localhost:44374/api/Delivery/PostDelivery", content))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     receivedDeliveryAddress = JsonConvert.DeserializeObject<AddDeliveryAddressModel>(apiResponse);

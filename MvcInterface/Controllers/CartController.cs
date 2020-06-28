@@ -95,6 +95,8 @@ namespace MvcInterface.Controllers
                     Id = id,
                     Username = this.User.Identity.Name
                 };
+
+
                 Username = _AddToCArtModel.Username;
                 StringContent content = new StringContent(JsonConvert.SerializeObject(_AddToCArtModel), Encoding.UTF8, "application/json");
                 using (var response = await httpClient.PostAsync("https://localhost:44374/api/Cart/RemoveCartItem", content))

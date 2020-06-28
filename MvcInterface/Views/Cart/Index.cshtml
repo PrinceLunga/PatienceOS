@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Patience Online Shopping";
-    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+    Layout = "~/Views/Shared/_HomeLayoutv1.cshtml";
 }
 
 
@@ -15,8 +15,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<h1>Shopping Cart Items</h1>
 @{
     double sum = 0;
 }
@@ -96,92 +94,89 @@
 @if (Model.Any())
 {
 
-<div id="dvContents">
+    <div id="dvContents">
 
-    <table class="table table-hover" width="100%">
-        <thead>
-            @*<img src="~/Templates/Header.jpg" width="100%" height="70px" />*@
-            <tr>
-
-                <th>Category</th>
-                <th>Department</th>
-
-                <th>Image</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Remove</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            @foreach (var x in Model)
-            {
+        <table class="table table-hover" width="100%">
+            <thead>
+                @*<img src="~/Templates/Header.jpg" width="100%" height="70px" />*@
                 <tr>
 
-                    <td>@x.SubGroup</td>
-                    <td>@x.Group</td>
+                    <th>Category</th>
+                    <th>Department</th>
+
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var x in Model)
+                {
+                    <tr>
+
+                        <td>@x.SubGroup</td>
+                        <td>@x.Group</td>
+                        <td>
+
+                            <img id="img1" src="data:image/jpeg;base64,@(Convert.ToBase64String(x.Image))" height="100" width="80" />
+
+                        </td>
+                        <td>R @x.Price</td>
+                        <td>@x.Quantity</td>
+
+                        <td>
+                            <a asp-controller="Cart" asp-action="RemoveCartItem" asp-route-id="@x.Id">
+                                <span class="glyphicon btn-danger"></span>Remove
+                            </a>
+                        </td>
+                    </tr>
+
+                }
+
+            </tbody>
+
+            @foreach (var x in Model)
+            {
+                sum = x.Total;
+
+            }
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+
+                    <td><b>Total</b></td>
                     <td>
-
-                        <img id="img1" src="data:image/jpeg;base64,@(Convert.ToBase64String(x.Image))" height="100" width="75" />
-
+                        R @sum
                     </td>
-                    <td>R @x.Price</td>
-                    <td>@x.Quantity</td>
-
+                </tr>
+                <tr>
                     <td>
-                        @*<a asp-action="UpdateProduct" class="btn btn-sm btn-primary" asp-route-id="@r.Id">Update Item</a>*@
-                        <a asp-controller="Cart" asp-action="RemoveCartItem" asp-route-id="@x.Id">
-                            <span class="glyphicon btn-danger"></span>Remove
+                        <button type="button" id="btnPrint" class="btn btn-primary">Print</button>
+                        @*<button type="button" class="btn btn-success">Continue Shopping</button>*@
+                        <a id="btn_add" href="@Url.Action("Index", "Product")" class="btn btn-info btn-lg">
+                            <span class="glyphicon glyphicon-eye-open"></span> Continue shopping
                         </a>
+                    </td>
+                    <td>
+                        <form asp-action="Charge" asp-controller="Cart" method="post">
+                            <label>Amount : R @sum</label>
+                            <script src="//checkout.stripe.com/v3/checkout.js"
+                                    class="stripe-button"
+                                    data-key="@Stripe.Value.PublishableKey"
+                                    data-description="Patience Online Shopping"
+                                    data-local="en">
+                            </script>
+                        </form>
                     </td>
                 </tr>
 
-            }
+            </tfoot>
 
-        </tbody>
+        </table>
 
-        @foreach (var x in Model)
-        {
-            sum = x.Total;
-
-        }
-        <tfoot>
-            <tr>
-                <td></td>
-                <td></td>
-
-                <td><b>Total</b></td>
-                <td>
-                    R @sum
-                </td>
-            </tr>
-
-        </tfoot>
-
-    </table>
-
-   
-    @*<button type="button" class="btn btn-warning">Check Out</button>*@
-
-</div>
-<div>
-    <button type="button" id="btnPrint" class="btn btn-primary">Print</button>
-    @*<button type="button" class="btn btn-success">Continue Shopping</button>*@
-    <a id="btn_add" href="@Url.Action("Index", "Product")" class="btn btn-info btn-lg" style="margin-left:60px">
-        <span class="glyphicon glyphicon-eye-open"></span> Continue shopping
-    </a>
-
-
-    <form asp-action="Charge" asp-controller="Cart" method="post">
-        <label>Amount : R @sum</label>
-        <script src="//checkout.stripe.com/v3/checkout.js"
-                class="stripe-button"
-                data-key="@Stripe.Value.PublishableKey"
-                data-description="Patience Online Shopping"
-                data-local="en">
-        </script>
-    </form>
-</div>
+    </div>
 
 }
 else

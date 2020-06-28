@@ -24,6 +24,12 @@ namespace MvcInterface.Controllers
             return View();
         }
 
+        public IActionResult IndexTwo()
+        {
+            return View();
+        }
+
+
         public IActionResult Privacy()
         {
             return View();
