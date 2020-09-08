@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class GroupForm extends Component {
+function Groups() {
 
     constructor(props){
         super(props);
