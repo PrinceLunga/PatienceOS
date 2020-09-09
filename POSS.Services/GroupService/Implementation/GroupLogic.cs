@@ -46,7 +46,21 @@ namespace POSS.Services.GroupService.Implementation
 
         public string DeleteGroup(int Id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (dbContext)
+                {
+                    var group = dbContext.Groups.Find(Id);
+                    dbContext.Remove(group);
+                    dbContext.SaveChanges();
+                    return "Deleted Successfully !";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return ex.Message.ToString();
+            }
         }
 
         public GroupModel FindGroupById(int Id)

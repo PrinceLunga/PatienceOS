@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using POSS.DataAccess.ProductModels;
-using POSS.Models.Cart;
-using POSS.Models.Customer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

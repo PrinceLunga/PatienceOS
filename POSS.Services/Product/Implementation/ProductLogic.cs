@@ -21,33 +21,40 @@ namespace POSS.Services.Implementation
         {
             dbContext = context;
         }
-        public string Add_Product(ProductModel model)
+        public string Add_Product(PostProductModel model)
         {
             try
             {
                 using (dbContext)
                 {
-      
-                    var product = new Product
+                    if( (model.Name != null) 
+                        && (model.Group != null) 
+                        && (model.Price != 0) )
                     {
-                        Id = model.Id,
-                        Name = model.Name,
-                        Description = model.Description,
-                        Group = model.Group,
-                        SubGroup = model.SubGroup,
-                        Image = model.Image,
-                        Price = Convert.ToDouble(model.Price.ToString()),
-                        Quantity = model.Quantity,
-                        Status = "InStock",
-                        CreatedBy = "Prince Lunga",
-                        DateCreated = DateTime.Now,
-                        Discount = model.Discount,
-                        Vat = model.Vat
-                    };
+                        var product = new Product
+                        {
+                            Id = model.Id,
+                            Name = model.Name,
+                            Description = model.Description,
+                            Group = model.Group,
+                            SubGroup = model.SubGroup,
+                            Image = model.Image,
+                            Price = Convert.ToDouble(model.Price.ToString()),
+                            Quantity = model.Quantity,
+                            Status = "InStock",
+                            CreatedBy = "Prince Lunga",
+                            DateCreated = DateTime.Now,
+                            Discount = model.Discount,
+                            Vat = model.Vat
+                        };
 
-                    dbContext.Products.Add(product);
-                    dbContext.SaveChanges();
-                    return "Product Successfully Added";
+                        dbContext.Products.Add(product);
+                        dbContext.SaveChanges();
+                        return "Product Successfully Added";
+                    }
+                    else
+                        return "Failed to Post when model is null";
+                    
                 }
             }
             catch (Exception ex)

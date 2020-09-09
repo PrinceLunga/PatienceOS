@@ -4,14 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Unicode;
 using System.Threading;
 using System.Threading.Tasks;
-using java.lang;
-using javax.xml.crypto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -55,10 +52,8 @@ namespace MvcInterface.Controllers
         public ViewResult AddProduct() => View();
 
         [HttpPost]
-        public async Task<IActionResult> AddProduct([FromForm] ProductModel product)
+        public async Task<IActionResult> AddProduct(ProductModel product)
         {
-
-            string Url = "https://localhost:44374/api/Products/PostProduct";
             using (var client = new HttpClient())
             {
                 //var a = Object;

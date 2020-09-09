@@ -96,13 +96,27 @@ namespace POSS
                 opts.Cookie.IsEssential = true; // make the session cookie Essential
             });
 
+
+            #region Allow-Orgin
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            });
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+           
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
 
-            app.UseCors(options => options.AllowAnyOrigin());
+            app.UseCors(options => options.AllowCredentials());
+
+            //app.UseCors(options => options.AllowAnyOrigin());
 
             if (env.IsDevelopment())
             {
@@ -114,8 +128,6 @@ namespace POSS
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

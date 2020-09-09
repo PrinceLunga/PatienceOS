@@ -1511,8 +1511,7 @@
       "POSS.DataAccess/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "3.1.2",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.2",
-          "POSS.Models": "1.0.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.2"
         },
         "runtime": {
           "POSS.DataAccess.dll": {}

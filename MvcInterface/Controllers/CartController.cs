@@ -8,11 +8,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using MvcInterface.Models;
 using Stripe;
+using System;
+using System.Net.Http.Headers;
 using Product = MvcInterface.Models.Product;
 using POSS.Models.Order;
-using System;
-using POSS.DataAccess.DataModels;
-using System.Net.Http.Headers;
 
 namespace MvcInterface.Controllers
 {
@@ -118,6 +117,8 @@ namespace MvcInterface.Controllers
             var order = new OrderModel();
             Email = this.User.Identity.Name;
 
+
+            //Get a list of item from the customer cart
             List<Product> cartItems = new List<Product>();
             using (var httpClient = new HttpClient())
             {
@@ -127,6 +128,7 @@ namespace MvcInterface.Controllers
                     cartItems = JsonConvert.DeserializeObject<List<Product>>(apiResponse);
                 }
            
+                //Calculate total
                 int counter = 0;
                 foreach(var item in cartItems)
                 {
@@ -144,7 +146,7 @@ namespace MvcInterface.Controllers
                         {
                             Items = _items,
                             Status = "Created",
-                            Discount = 0.00,
+                            Discount = discount,
                             Total = total,
                             VAT = 15,
                             OrderDate = DateTime.Now,
@@ -158,6 +160,8 @@ namespace MvcInterface.Controllers
 
                 }
 
+
+                //Call Stripe Service to Perform payment
                 var customerService = new CustomerService();
                 var chargeService = new ChargeService();
 
