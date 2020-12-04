@@ -3,39 +3,26 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace POSS.DataAccess.Migrations
 {
-    public partial class DelivryConext : Migration
+    public partial class CartHISTORY : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Deliveries",
+                name: "CartHistories",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
+                    CartHistoryId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Fullnames = table.Column<string>(nullable: true),
-                    RecipientMobileNo = table.Column<string>(nullable: true),
-                    StreetAddress = table.Column<string>(nullable: true),
-                    Complex = table.Column<string>(nullable: true),
-                    isResidential = table.Column<bool>(nullable: false),
-                    Suburb = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: true),
-                    Province = table.Column<string>(nullable: true),
-                    PostalCode = table.Column<string>(nullable: true)
+                    UserCartId = table.Column<string>(nullable: true),
+                    Quantity = table.Column<int>(nullable: false),
+                    Price = table.Column<double>(nullable: false),
+                    Status = table.Column<string>(nullable: true),
+                    DateRecorded = table.Column<DateTime>(nullable: false),
+                    ProductId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Deliveries", x => x.Id);
-                });
-
-            migrationBuilder.InsertData(
-                table: "Deliveries",
-                columns: new[] { "Id", "City", "Complex", "Fullnames", "PostalCode", "Province", "RecipientMobileNo", "StreetAddress", "Suburb", "isResidential" },
-                values: new object[,]
-                {
-                    { 1, "Cape Town", "Devon Square", "Prince Thabane Lunga", "8100", "Western Cape", "0659779508", "70 Exeter Road", "Plumstead", true },
-                    { 2, "Cape Town", "La rouge", "Rorbet Smith", "8700", "Western Cape", "0659779507", "12 Dor'Chester", "Park Lands", true },
-                    { 3, "Durban", "Renaisense", "Siyanda Mlondo", "4000", "KwaZulu Natal", "0659229507", "SF Mfusi Road", "Durban", true }
+                    table.PrimaryKey("PK_CartHistories", x => x.CartHistoryId);
                 });
 
             migrationBuilder.UpdateData(
@@ -43,262 +30,258 @@ namespace POSS.DataAccess.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 170, DateTimeKind.Local).AddTicks(2832));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 635, DateTimeKind.Local).AddTicks(7318));
 
             migrationBuilder.UpdateData(
                 table: "Groups",
                 keyColumn: "Id",
                 keyValue: 2,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 172, DateTimeKind.Local).AddTicks(2205));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 637, DateTimeKind.Local).AddTicks(2518));
 
             migrationBuilder.UpdateData(
                 table: "Groups",
                 keyColumn: "Id",
                 keyValue: 3,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 172, DateTimeKind.Local).AddTicks(2248));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 637, DateTimeKind.Local).AddTicks(2553));
 
             migrationBuilder.UpdateData(
                 table: "Orders",
                 keyColumn: "Id",
                 keyValue: 100,
                 column: "OrderDate",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 176, DateTimeKind.Local).AddTicks(6805));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 640, DateTimeKind.Local).AddTicks(8273));
 
             migrationBuilder.UpdateData(
                 table: "Orders",
                 keyColumn: "Id",
                 keyValue: 101,
                 column: "OrderDate",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 176, DateTimeKind.Local).AddTicks(2605));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 640, DateTimeKind.Local).AddTicks(4439));
 
             migrationBuilder.UpdateData(
                 table: "Payments",
                 keyColumn: "Id",
                 keyValue: 100,
                 column: "PaymentDate",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 179, DateTimeKind.Local).AddTicks(7591));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 643, DateTimeKind.Local).AddTicks(2949));
 
             migrationBuilder.UpdateData(
                 table: "Payments",
                 keyColumn: "Id",
                 keyValue: 101,
                 column: "PaymentDate",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 179, DateTimeKind.Local).AddTicks(8469));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 643, DateTimeKind.Local).AddTicks(3648));
 
             migrationBuilder.UpdateData(
                 table: "Products",
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 174, DateTimeKind.Local).AddTicks(7270));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 639, DateTimeKind.Local).AddTicks(293));
 
             migrationBuilder.UpdateData(
                 table: "Products",
                 keyColumn: "Id",
                 keyValue: 3,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 175, DateTimeKind.Local).AddTicks(3388));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 639, DateTimeKind.Local).AddTicks(6410));
 
             migrationBuilder.UpdateData(
                 table: "Products",
                 keyColumn: "Id",
                 keyValue: 4,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 175, DateTimeKind.Local).AddTicks(8338));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 640, DateTimeKind.Local).AddTicks(701));
 
             migrationBuilder.UpdateData(
                 table: "SubGroups",
                 keyColumn: "SubGroup_Id",
                 keyValue: 1,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 172, DateTimeKind.Local).AddTicks(9935));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 637, DateTimeKind.Local).AddTicks(5995));
 
             migrationBuilder.UpdateData(
                 table: "SubGroups",
                 keyColumn: "SubGroup_Id",
                 keyValue: 2,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 173, DateTimeKind.Local).AddTicks(1229));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 637, DateTimeKind.Local).AddTicks(6991));
 
             migrationBuilder.UpdateData(
                 table: "SubGroups",
                 keyColumn: "SubGroup_Id",
                 keyValue: 3,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 173, DateTimeKind.Local).AddTicks(1261));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 637, DateTimeKind.Local).AddTicks(7018));
 
             migrationBuilder.UpdateData(
                 table: "SubGroups",
                 keyColumn: "SubGroup_Id",
                 keyValue: 4,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 173, DateTimeKind.Local).AddTicks(1261));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 637, DateTimeKind.Local).AddTicks(7020));
 
             migrationBuilder.UpdateData(
                 table: "SubGroups",
                 keyColumn: "SubGroup_Id",
                 keyValue: 5,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 173, DateTimeKind.Local).AddTicks(1342));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 637, DateTimeKind.Local).AddTicks(7022));
 
             migrationBuilder.UpdateData(
                 table: "SubGroups",
                 keyColumn: "SubGroup_Id",
                 keyValue: 6,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 24, 1, 24, 17, 173, DateTimeKind.Local).AddTicks(1346));
+                value: new DateTime(2020, 12, 4, 12, 26, 54, 637, DateTimeKind.Local).AddTicks(7024));
 
             migrationBuilder.UpdateData(
                 table: "Transactions",
                 keyColumn: "Id",
                 keyValue: 100,
                 columns: new[] { "EndTime", "Parameters", "StartTime" },
-                values: new object[] { new DateTime(2020, 6, 24, 1, 24, 19, 177, DateTimeKind.Local).AddTicks(1554), "Lungapt@gmail.com|0.00|1|2020/06/24 01:24:17|Create|900.00|15", new DateTime(2020, 6, 24, 1, 24, 18, 177, DateTimeKind.Local).AddTicks(750) });
+                values: new object[] { new DateTime(2020, 12, 4, 12, 26, 56, 641, DateTimeKind.Local).AddTicks(2751), "Lungapt@gmail.com|0.00|1|2020/12/04 12:26:54|Create|900.00|15", new DateTime(2020, 12, 4, 12, 26, 55, 641, DateTimeKind.Local).AddTicks(2010) });
 
             migrationBuilder.UpdateData(
                 table: "Transactions",
                 keyColumn: "Id",
                 keyValue: 101,
                 columns: new[] { "EndTime", "Parameters", "StartTime" },
-                values: new object[] { new DateTime(2020, 6, 24, 1, 24, 19, 179, DateTimeKind.Local).AddTicks(3621), "Lungapt@gmail.com|0.00|2|2020/06/24 01:24:17|Create|1800.00|15", new DateTime(2020, 6, 24, 1, 24, 18, 179, DateTimeKind.Local).AddTicks(3589) });
+                values: new object[] { new DateTime(2020, 12, 4, 12, 26, 56, 642, DateTimeKind.Local).AddTicks(9791), "Lungapt@gmail.com|0.00|2|2020/12/04 12:26:54|Create|1800.00|15", new DateTime(2020, 12, 4, 12, 26, 55, 642, DateTimeKind.Local).AddTicks(9762) });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Deliveries");
-
-            migrationBuilder.DropColumn(
-                name: "Status",
-                table: "Carts");
+                name: "CartHistories");
 
             migrationBuilder.UpdateData(
                 table: "Groups",
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 361, DateTimeKind.Local).AddTicks(5266));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 41, DateTimeKind.Local).AddTicks(5370));
 
             migrationBuilder.UpdateData(
                 table: "Groups",
                 keyColumn: "Id",
                 keyValue: 2,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(682));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 42, DateTimeKind.Local).AddTicks(8081));
 
             migrationBuilder.UpdateData(
                 table: "Groups",
                 keyColumn: "Id",
                 keyValue: 3,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(725));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 42, DateTimeKind.Local).AddTicks(8112));
 
             migrationBuilder.UpdateData(
                 table: "Orders",
                 keyColumn: "Id",
                 keyValue: 100,
                 column: "OrderDate",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 367, DateTimeKind.Local).AddTicks(9735));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 46, DateTimeKind.Local).AddTicks(1005));
 
             migrationBuilder.UpdateData(
                 table: "Orders",
                 keyColumn: "Id",
                 keyValue: 101,
                 column: "OrderDate",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 367, DateTimeKind.Local).AddTicks(6695));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 45, DateTimeKind.Local).AddTicks(7190));
 
             migrationBuilder.UpdateData(
                 table: "Payments",
                 keyColumn: "Id",
                 keyValue: 100,
                 column: "PaymentDate",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 370, DateTimeKind.Local).AddTicks(2250));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 48, DateTimeKind.Local).AddTicks(506));
 
             migrationBuilder.UpdateData(
                 table: "Payments",
                 keyColumn: "Id",
                 keyValue: 101,
                 column: "PaymentDate",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 370, DateTimeKind.Local).AddTicks(2846));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 48, DateTimeKind.Local).AddTicks(1583));
 
             migrationBuilder.UpdateData(
                 table: "Products",
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 366, DateTimeKind.Local).AddTicks(1188));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 44, DateTimeKind.Local).AddTicks(6382));
 
             migrationBuilder.UpdateData(
                 table: "Products",
                 keyColumn: "Id",
                 keyValue: 3,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 366, DateTimeKind.Local).AddTicks(7531));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 45, DateTimeKind.Local).AddTicks(1038));
 
             migrationBuilder.UpdateData(
                 table: "Products",
                 keyColumn: "Id",
                 keyValue: 4,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 367, DateTimeKind.Local).AddTicks(3589));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 45, DateTimeKind.Local).AddTicks(4751));
 
             migrationBuilder.UpdateData(
                 table: "SubGroups",
                 keyColumn: "SubGroup_Id",
                 keyValue: 1,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(4720));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 43, DateTimeKind.Local).AddTicks(1344));
 
             migrationBuilder.UpdateData(
                 table: "SubGroups",
                 keyColumn: "SubGroup_Id",
                 keyValue: 2,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(5940));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 43, DateTimeKind.Local).AddTicks(2926));
 
             migrationBuilder.UpdateData(
                 table: "SubGroups",
                 keyColumn: "SubGroup_Id",
                 keyValue: 3,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(5965));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 43, DateTimeKind.Local).AddTicks(2962));
 
             migrationBuilder.UpdateData(
                 table: "SubGroups",
                 keyColumn: "SubGroup_Id",
                 keyValue: 4,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(5965));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 43, DateTimeKind.Local).AddTicks(2966));
 
             migrationBuilder.UpdateData(
                 table: "SubGroups",
                 keyColumn: "SubGroup_Id",
                 keyValue: 5,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(5968));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 43, DateTimeKind.Local).AddTicks(2968));
 
             migrationBuilder.UpdateData(
                 table: "SubGroups",
                 keyColumn: "SubGroup_Id",
                 keyValue: 6,
                 column: "DateCreated",
-                value: new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(5968));
+                value: new DateTime(2020, 12, 2, 18, 57, 40, 43, DateTimeKind.Local).AddTicks(2970));
 
             migrationBuilder.UpdateData(
                 table: "Transactions",
                 keyColumn: "Id",
                 keyValue: 100,
                 columns: new[] { "EndTime", "Parameters", "StartTime" },
-                values: new object[] { new DateTime(2020, 6, 7, 16, 30, 48, 368, DateTimeKind.Local).AddTicks(3646), "Lungapt@gmail.com|0.00|1|2020/06/07 16:30:46|Create|900.00|15", new DateTime(2020, 6, 7, 16, 30, 47, 368, DateTimeKind.Local).AddTicks(2972) });
+                values: new object[] { new DateTime(2020, 12, 2, 18, 57, 42, 46, DateTimeKind.Local).AddTicks(4017), "Lungapt@gmail.com|0.00|1|2020/12/02 18:57:40|Create|900.00|15", new DateTime(2020, 12, 2, 18, 57, 41, 46, DateTimeKind.Local).AddTicks(3458) });
 
             migrationBuilder.UpdateData(
                 table: "Transactions",
                 keyColumn: "Id",
                 keyValue: 101,
                 columns: new[] { "EndTime", "Parameters", "StartTime" },
-                values: new object[] { new DateTime(2020, 6, 7, 16, 30, 48, 369, DateTimeKind.Local).AddTicks(9408), "Lungapt@gmail.com|0.00|2|2020/06/07 16:30:46|Create|1800.00|15", new DateTime(2020, 6, 7, 16, 30, 47, 369, DateTimeKind.Local).AddTicks(9383) });
+                values: new object[] { new DateTime(2020, 12, 2, 18, 57, 42, 47, DateTimeKind.Local).AddTicks(7982), "Lungapt@gmail.com|0.00|2|2020/12/02 18:57:40|Create|1800.00|15", new DateTime(2020, 12, 2, 18, 57, 41, 47, DateTimeKind.Local).AddTicks(7957) });
         }
     }
 }

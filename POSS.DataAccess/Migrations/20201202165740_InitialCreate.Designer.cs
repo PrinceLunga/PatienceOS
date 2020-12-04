@@ -10,8 +10,8 @@ using POSS.DataAccess.Context;
 namespace POSS.DataAccess.Migrations
 {
     [DbContext(typeof(POSSDbContext))]
-    [Migration("20200607143047_TransactinContext")]
-    partial class TransactinContext
+    [Migration("20201202165740_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,6 +42,9 @@ namespace POSS.DataAccess.Migrations
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserCartId")
                         .HasColumnType("nvarchar(max)");
@@ -98,6 +101,86 @@ namespace POSS.DataAccess.Migrations
                     b.ToTable("Customers");
                 });
 
+            modelBuilder.Entity("POSS.DataAccess.DataModels.Delivery", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Complex")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Fullnames")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostalCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Province")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RecipientMobileNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StreetAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Suburb")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("isResidential")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Deliveries");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            City = "Cape Town",
+                            Complex = "Devon Square",
+                            Fullnames = "Prince Thabane Lunga",
+                            PostalCode = "8100",
+                            Province = "Western Cape",
+                            RecipientMobileNo = "0659779508",
+                            StreetAddress = "70 Exeter Road",
+                            Suburb = "Plumstead",
+                            isResidential = true
+                        },
+                        new
+                        {
+                            Id = 2,
+                            City = "Cape Town",
+                            Complex = "La rouge",
+                            Fullnames = "Rorbet Smith",
+                            PostalCode = "8700",
+                            Province = "Western Cape",
+                            RecipientMobileNo = "0659779507",
+                            StreetAddress = "12 Dor'Chester",
+                            Suburb = "Park Lands",
+                            isResidential = true
+                        },
+                        new
+                        {
+                            Id = 3,
+                            City = "Durban",
+                            Complex = "Renaisense",
+                            Fullnames = "Siyanda Mlondo",
+                            PostalCode = "4000",
+                            Province = "KwaZulu Natal",
+                            RecipientMobileNo = "0659229507",
+                            StreetAddress = "SF Mfusi Road",
+                            Suburb = "Durban",
+                            isResidential = true
+                        });
+                });
+
             modelBuilder.Entity("POSS.DataAccess.DataModels.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -141,7 +224,7 @@ namespace POSS.DataAccess.Migrations
                             CompletionDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Discount = 0.0,
                             Items = 2,
-                            OrderDate = new DateTime(2020, 6, 7, 16, 30, 46, 367, DateTimeKind.Local).AddTicks(6695),
+                            OrderDate = new DateTime(2020, 12, 2, 18, 57, 40, 45, DateTimeKind.Local).AddTicks(7190),
                             Status = "Create",
                             Total = 1800.0,
                             VAT = 15.0
@@ -153,7 +236,7 @@ namespace POSS.DataAccess.Migrations
                             CompletionDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Discount = 0.0,
                             Items = 1,
-                            OrderDate = new DateTime(2020, 6, 7, 16, 30, 46, 367, DateTimeKind.Local).AddTicks(9735),
+                            OrderDate = new DateTime(2020, 12, 2, 18, 57, 40, 46, DateTimeKind.Local).AddTicks(1005),
                             Status = "Create",
                             Total = 900.0,
                             VAT = 15.0
@@ -186,14 +269,14 @@ namespace POSS.DataAccess.Migrations
                             Id = 100,
                             Amount = 1800.0,
                             CustomerUsername = "Lungapt@gmail.com",
-                            PaymentDate = new DateTime(2020, 6, 7, 16, 30, 46, 370, DateTimeKind.Local).AddTicks(2250)
+                            PaymentDate = new DateTime(2020, 12, 2, 18, 57, 40, 48, DateTimeKind.Local).AddTicks(506)
                         },
                         new
                         {
                             Id = 101,
                             Amount = 900.0,
                             CustomerUsername = "Luthando@gmail.com",
-                            PaymentDate = new DateTime(2020, 6, 7, 16, 30, 46, 370, DateTimeKind.Local).AddTicks(2846)
+                            PaymentDate = new DateTime(2020, 12, 2, 18, 57, 40, 48, DateTimeKind.Local).AddTicks(1583)
                         });
                 });
 
@@ -236,10 +319,10 @@ namespace POSS.DataAccess.Migrations
                         new
                         {
                             Id = 100,
-                            EndTime = new DateTime(2020, 6, 7, 16, 30, 48, 368, DateTimeKind.Local).AddTicks(3646),
+                            EndTime = new DateTime(2020, 12, 2, 18, 57, 42, 46, DateTimeKind.Local).AddTicks(4017),
                             Failure = false,
-                            Parameters = "Lungapt@gmail.com|0.00|1|2020/06/07 16:30:46|Create|900.00|15",
-                            StartTime = new DateTime(2020, 6, 7, 16, 30, 47, 368, DateTimeKind.Local).AddTicks(2972),
+                            Parameters = "Lungapt@gmail.com|0.00|1|2020/12/02 18:57:40|Create|900.00|15",
+                            StartTime = new DateTime(2020, 12, 2, 18, 57, 41, 46, DateTimeKind.Local).AddTicks(3458),
                             Status = "Success",
                             Success = true,
                             TriggeredAction = "Charge"
@@ -247,10 +330,10 @@ namespace POSS.DataAccess.Migrations
                         new
                         {
                             Id = 101,
-                            EndTime = new DateTime(2020, 6, 7, 16, 30, 48, 369, DateTimeKind.Local).AddTicks(9408),
+                            EndTime = new DateTime(2020, 12, 2, 18, 57, 42, 47, DateTimeKind.Local).AddTicks(7982),
                             Failure = false,
-                            Parameters = "Lungapt@gmail.com|0.00|2|2020/06/07 16:30:46|Create|1800.00|15",
-                            StartTime = new DateTime(2020, 6, 7, 16, 30, 47, 369, DateTimeKind.Local).AddTicks(9383),
+                            Parameters = "Lungapt@gmail.com|0.00|2|2020/12/02 18:57:40|Create|1800.00|15",
+                            StartTime = new DateTime(2020, 12, 2, 18, 57, 41, 47, DateTimeKind.Local).AddTicks(7957),
                             Status = "Success",
                             Success = true,
                             TriggeredAction = "Charge"
@@ -294,7 +377,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 6, 7, 16, 30, 46, 361, DateTimeKind.Local).AddTicks(5266),
+                            DateCreated = new DateTime(2020, 12, 2, 18, 57, 40, 41, DateTimeKind.Local).AddTicks(5370),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Department as per categories e.g Footwear, Accessories",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -304,7 +387,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             Id = 2,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(682),
+                            DateCreated = new DateTime(2020, 12, 2, 18, 57, 40, 42, DateTimeKind.Local).AddTicks(8081),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Seasons e.g Summer, Winter",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -314,7 +397,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             Id = 3,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(725),
+                            DateCreated = new DateTime(2020, 12, 2, 18, 57, 40, 42, DateTimeKind.Local).AddTicks(8112),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Age e.g Kids, Adult, 10 - 15 years, ",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -382,7 +465,7 @@ namespace POSS.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2020, 6, 7, 16, 30, 46, 366, DateTimeKind.Local).AddTicks(1188),
+                            DateCreated = new DateTime(2020, 12, 2, 18, 57, 40, 44, DateTimeKind.Local).AddTicks(6382),
                             DateDeleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Blue Ladies Skinny Denim Jean",
@@ -399,7 +482,7 @@ namespace POSS.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            DateCreated = new DateTime(2020, 6, 7, 16, 30, 46, 366, DateTimeKind.Local).AddTicks(7531),
+                            DateCreated = new DateTime(2020, 12, 2, 18, 57, 40, 45, DateTimeKind.Local).AddTicks(1038),
                             DateDeleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Blue Guys Denim Jean Short",
@@ -416,7 +499,7 @@ namespace POSS.DataAccess.Migrations
                         new
                         {
                             Id = 4,
-                            DateCreated = new DateTime(2020, 6, 7, 16, 30, 46, 367, DateTimeKind.Local).AddTicks(3589),
+                            DateCreated = new DateTime(2020, 12, 2, 18, 57, 40, 45, DateTimeKind.Local).AddTicks(4751),
                             DateDeleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Blue Ladies Skinny Denim Jean",
@@ -474,7 +557,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             SubGroup_Id = 1,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(4720),
+                            DateCreated = new DateTime(2020, 12, 2, 18, 57, 40, 43, DateTimeKind.Local).AddTicks(1344),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Adidas sport sneaker",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -485,7 +568,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             SubGroup_Id = 2,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(5940),
+                            DateCreated = new DateTime(2020, 12, 2, 18, 57, 40, 43, DateTimeKind.Local).AddTicks(2926),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Leather Sandals",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -496,7 +579,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             SubGroup_Id = 3,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(5965),
+                            DateCreated = new DateTime(2020, 12, 2, 18, 57, 40, 43, DateTimeKind.Local).AddTicks(2962),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Winter Leather Jacket",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -507,7 +590,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             SubGroup_Id = 4,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(5965),
+                            DateCreated = new DateTime(2020, 12, 2, 18, 57, 40, 43, DateTimeKind.Local).AddTicks(2966),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Winter Track Suit Pants and Top",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -518,7 +601,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             SubGroup_Id = 5,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(5968),
+                            DateCreated = new DateTime(2020, 12, 2, 18, 57, 40, 43, DateTimeKind.Local).AddTicks(2968),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "10 - 15 Years",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -529,7 +612,7 @@ namespace POSS.DataAccess.Migrations
                         {
                             SubGroup_Id = 6,
                             CreatedBy = "Prince Lunga",
-                            DateCreated = new DateTime(2020, 6, 7, 16, 30, 46, 364, DateTimeKind.Local).AddTicks(5968),
+                            DateCreated = new DateTime(2020, 12, 2, 18, 57, 40, 43, DateTimeKind.Local).AddTicks(2970),
                             DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "12 - 16 years",
                             EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
