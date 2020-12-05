@@ -1,0 +1,95 @@
+﻿@model MvcInterface.Models.ProductModel
+
+@{
+    ViewData["Title"] = "Add Stock ";
+    Layout = "~/Views/Shared/_UserDashBoardcshtml.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<h1>Add Item(s) for Stock </h1>
+@{
+    double sum = 0;
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+<h2>Add a Product <a asp-action="Index" class="btn btn-sm btn-secondary">Back</a></h2>
+
+<div class="contact">
+    <div class="container-fluid padding_right_15_inner">
+
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 padddd">
+                <form class="main_form" asp-action="AddProductTest" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input asp-for="Name" class="form-control" placeholder="Name" type="text" name="Name">
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input asp-for="Description" class="form-control" placeholder="Description" type="text" name="Description">
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input asp-for="Group" class="form-control" Group placeholder="Group" type="text" name="Group">
+                            <span asp-validation-for="Group" class="text-danger"></span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input asp-for="SubGroup" class="form-control" placeholder="SubGroup" type="text" name="SubGroup">
+                            <span asp-validation-for="SubGroup" class="text-danger"></span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input asp-for="Status" class="form-control" placeholder="Status" type="text" name="Status">
+                            <span asp-validation-for="Status" class="text-danger"></span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input asp-for="Quantity" class="form-control" placeholder="Quantity" type="text" name="Quantity">
+                            <span asp-validation-for="Quantity" class="text-danger"></span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input asp-for="Price" class="form-control" placeholder="Price" type="text" name="Price">
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input name="Image" type="file" class="btn btn-microsoft" placeholder="Image" name="Image">
+                            <span asp-validation-for="Image" class="text-danger"></span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <button class="send">Add Product</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (Model != null)
+{
+    <h2>Product</h2>
+    <table class="table table-sm table-striped table-bordered m-2">
+        <thead><tr><th>ID</th><th>Name</th><th>Description</th><th>Group</th> <th>SubGroup</th> <th>Status</th> <th>Price</th> <th>Quantity</th> <th>Image</th></tr></thead>
+        <tbody>
+            <tr>
+                <td>@Model.Id</td>
+                <td>@Model.Name</td>
+                <td>@Model.Description</td>
+                <td>@Model.Group</td>
+                <td>@Model.SubGroup</td>
+                <td>@Model.Status</td>
+                <td>@Model.Price</td>
+                <td>@Model.Quantity</td>
+                <td>
+                    <img src="@ViewBag.ImgPath" alt="@Model.Image" height="100" width="100" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}
+

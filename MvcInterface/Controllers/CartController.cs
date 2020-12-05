@@ -70,6 +70,48 @@ namespace MvcInterface.Controllers
         }
 
         [HttpGet]
+        public async Task<IActionResult> AddItemToCartTest(int Id)
+        {
+            List<Product> products = new List<Product>();
+            Product cartItem = new Product();
+            using (var httpClient = new HttpClient())
+            {
+                using (var response = await httpClient.GetAsync("https://localhost:44374/api/Products/GetProduct/" + Id))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    cartItem = JsonConvert.DeserializeObject<Product>(apiResponse);
+                    cartItem.Quantity = 1;
+                }
+            }
+            products.Add(cartItem);
+            return View(products);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> AddItemToCartTest(Product model)
+        {
+            Product cartModel = new Product();
+            using (var httpClient = new HttpClient())
+            {
+                AddToCartModel _AddToCArtModel = new AddToCartModel
+                {
+                    Id = model.Id,
+                    Username = this.User.Identity.Name
+                };
+                Username = _AddToCArtModel.Username;
+                StringContent content = new StringContent(JsonConvert.SerializeObject(_AddToCArtModel), Encoding.UTF8, "application/json");
+                using (var response = await httpClient.PostAsync("https://localhost:44374/api/Cart/PostOrder", content))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    // cartModel = JsonConvert.DeserializeObject<string>(apiResponse);
+                }
+            }
+            return RedirectToAction(nameof(IndexTest));
+        }
+
+
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             List<Product> cartItems = new List<Product>();
@@ -77,6 +119,22 @@ namespace MvcInterface.Controllers
             {
                 Username = this.User.Identity.Name;
                 using (var response = await httpClient.GetAsync("https://localhost:44374/api/Cart/GetShoppingCartByUser/"+ Username))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    cartItems = JsonConvert.DeserializeObject<List<Product>>(apiResponse);
+                }
+            }
+            return View(cartItems);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> IndexTest()
+        {
+            List<Product> cartItems = new List<Product>();
+            using (var httpClient = new HttpClient())
+            {
+                Username = this.User.Identity.Name;
+                using (var response = await httpClient.GetAsync("https://localhost:44374/api/Cart/GetShoppingCartByUser/" + Username))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     cartItems = JsonConvert.DeserializeObject<List<Product>>(apiResponse);
@@ -102,7 +160,7 @@ namespace MvcInterface.Controllers
                     string apiResponse = await response.Content.ReadAsStringAsync();
                 }
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(IndexTest));
         }
 
 
@@ -216,7 +274,7 @@ namespace MvcInterface.Controllers
                     StartTime = DateTime.Now.AddSeconds(1),
                     Success = true,
                     Failure = false,
-                    TransactionName = "Cheque Out",
+                    TransactionName = "Check Out",
                     TriggeredAction = "Payment",
                     EndTime = DateTime.Now.AddSeconds(2),
                     Parameters = $"|Username|{Email}|Discount|{discount}|NoOfItems|{_items}|{DateTime.Now}|Charge|{total}|{vat}"

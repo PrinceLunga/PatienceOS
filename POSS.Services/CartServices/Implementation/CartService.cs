@@ -44,7 +44,7 @@ namespace POSS.Services.CartServices.Implementation
                     }
 
                     //Find the product on the cart
-                    double productPrice = 0;
+                    //double productPrice = 0;
 
                     var product = dbContext.Products.Where(x => x.Id == model.Id).SingleOrDefault();
 
