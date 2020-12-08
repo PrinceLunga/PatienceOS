@@ -45,6 +45,7 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.pdb
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.genruntimeconfig.cache
+<<<<<<< HEAD
 C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\POSSConsole.exe
 C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\POSSConsole.deps.json
 C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\POSSConsole.runtimeconfig.json
@@ -62,3 +63,22 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\POSSConsole\o
 C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.pdb
 C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.genruntimeconfig.cache
+=======
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\POSSConsole.exe
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\POSSConsole.deps.json
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\POSSConsole.runtimeconfig.json
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\POSSConsole.runtimeconfig.dev.json
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\POSSConsole.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\POSSConsole.pdb
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.csprojAssemblyReference.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.AssemblyInfoInputs.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.AssemblyInfo.cs
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.csproj.CoreCompileInputs.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.csproj.CopyComplete
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.pdb
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSConsole\obj\Debug\netcoreapp3.1\POSSConsole.genruntimeconfig.cache
+>>>>>>> origin/Read

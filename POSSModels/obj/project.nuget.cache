@@ -1,6 +1,7 @@
 {
   "version": 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "wj0AxDZFB5qbILZ4dZfQX6UJF/+HkHMTdM4b+h7w0tRcnVZFemJMt7fQa0BkHnDNjUB+vKnafrPBuo+TuH0K7g==",
 =======
   "dgSpecHash": "Ha0cFntKD2jrHJcyFoOx0zRLczQ1HYOTCWGo0IWBurW8GEuhHTmbNKAYefP0cSPY86rpIn6xByCGbbbpE+TxMw==",
@@ -11,6 +12,15 @@
     "C:\\Users\\prince.lunga\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.3\\microsoft.aspnetcore.http.features.3.1.3.nupkg.sha512",
     "C:\\Users\\prince.lunga\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.3\\microsoft.extensions.primitives.3.1.3.nupkg.sha512",
     "C:\\Users\\prince.lunga\\.nuget\\packages\\system.io.pipelines\\4.7.1\\system.io.pipelines.4.7.1.nupkg.sha512"
+=======
+  "dgSpecHash": "rQUGyxjyd+vWA8uCL6OucaSvTiLPbpIZePNpc6KE2kXzfIdmKmezklu2FlRLtiXw/cZ3SkglbD5+laTT964F5w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Nhlanhla Vilakazi\\Desktop\\Patience OS\\PatienceOS\\POSSModels\\POSS.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nhlanhla Vilakazi\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.3\\microsoft.aspnetcore.http.features.3.1.3.nupkg.sha512",
+    "C:\\Users\\Nhlanhla Vilakazi\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.3\\microsoft.extensions.primitives.3.1.3.nupkg.sha512",
+    "C:\\Users\\Nhlanhla Vilakazi\\.nuget\\packages\\system.io.pipelines\\4.7.1\\system.io.pipelines.4.7.1.nupkg.sha512"
+>>>>>>> origin/Read
   ],
   "logs": []
 }

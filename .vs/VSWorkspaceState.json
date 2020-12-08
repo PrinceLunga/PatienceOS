@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\POSS"
+    "\\POSS.Services",
+    "\\POSS.Services\\CartServices",
+    "\\POSS.Services\\CartServices\\Implementation",
+    "\\POSS.Services\\CartServices\\Interface"
   ],
-  "SelectedNode": "\\POSS\\POSS.sln",
+  "SelectedNode": "\\POSS.Services\\CartServices\\Interface\\ICartService.cs",
   "PreviewInSolutionExplorer": false
 }

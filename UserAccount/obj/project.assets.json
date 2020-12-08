@@ -9592,12 +9592,17 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\prince.lunga\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+=======
+    "C:\\Users\\Nhlanhla Vilakazi\\.nuget\\packages\\": {}
+>>>>>>> origin/Read
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\UserAccount\\UserAccount.csproj",
       "projectName": "UserAccount",
       "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\UserAccount\\UserAccount.csproj",
@@ -9609,6 +9614,16 @@
       ],
       "configFilePaths": [
         "C:\\Users\\prince.lunga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\Nhlanhla Vilakazi\\Desktop\\Patience OS\\PatienceOS\\UserAccount\\UserAccount.csproj",
+      "projectName": "UserAccount",
+      "projectPath": "C:\\Users\\Nhlanhla Vilakazi\\Desktop\\Patience OS\\PatienceOS\\UserAccount\\UserAccount.csproj",
+      "packagesPath": "C:\\Users\\Nhlanhla Vilakazi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nhlanhla Vilakazi\\Desktop\\Patience OS\\PatienceOS\\UserAccount\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Nhlanhla Vilakazi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> origin/Read
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9622,8 +9637,13 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSS.Services\\POSS.Services.csproj": {
               "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSS.Services\\POSS.Services.csproj"
+=======
+            "C:\\Users\\Nhlanhla Vilakazi\\Desktop\\Patience OS\\PatienceOS\\POSS.Services\\POSS.Services.csproj": {
+              "projectPath": "C:\\Users\\Nhlanhla Vilakazi\\Desktop\\Patience OS\\PatienceOS\\POSS.Services\\POSS.Services.csproj"
+>>>>>>> origin/Read
             }
           }
         }
@@ -9676,10 +9696,14 @@
           }
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
 =======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
 >>>>>>> origin/sub_Branch
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+>>>>>>> origin/Read
       }
     }
   }

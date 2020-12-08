@@ -1,3 +1,7 @@
 ﻿<StaticWebAssets Version="1.0">
+<<<<<<< HEAD
   <ContentRoot BasePath="_content/POSSMvc" Path="C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\POSSMvc\wwwroot\" />
+=======
+  <ContentRoot BasePath="_content/POSSMvc" Path="C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSSMvc\wwwroot\" />
+>>>>>>> origin/Read
 </StaticWebAssets>

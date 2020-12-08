@@ -11,7 +11,6 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-MvcTest-B933737E-BBEC-4215-B379-B727BAB64463")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MvcTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]

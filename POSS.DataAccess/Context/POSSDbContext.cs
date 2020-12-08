@@ -27,6 +27,7 @@ namespace POSS.DataAccess.Context
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Delivery> Deliveries { get; set; }
+        public DbSet<CartHistory> CartHistories { get; set; }
 
        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
