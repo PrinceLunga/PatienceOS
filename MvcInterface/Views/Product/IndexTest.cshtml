@@ -1,0 +1,97 @@
+﻿@model IEnumerable<MvcInterface.Models.Product>
+
+@{
+    ViewData["Title"] = "IndexTest";
+    Layout = "~/Views/Shared/_UserDashBoardcshtml.cshtml";
+}
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Patience</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="~/users/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="~/users/css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="~/users/css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="~/users/images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="~/users/css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <!-- Favicons -->
+    <link href="~/users/assets/img/favicon.png" rel="icon">
+    <link href="~/users/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/users/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/users/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/users/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="~/users/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/users/assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="~/users/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/users/assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/users/assets/css/style.css" rel="stylesheet">
+
+</head>
+<div class="contactus">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="title">
+                    <h2>Our Product</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ourproduct">
+    <div class="container">
+        <div class="row product_style_3" ">
+            @foreach (var item in Model)
+            {
+                <!-- product -->
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="full product">
+                        <div class="product_img">
+                            <div class="center">
+                                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Image))" alt="#" />
+
+                                <div class="overlay_hover"><a class="add-bt" href="@Url.Action("AddItemToCartTest","Cart",new { Id = item.Id })">+ Add to cart</a></div>
+                            </div>
+                        </div>
+                        <div class="product_detail text_align_center">
+                            <p class="product_price">R @item.Price</p>
+                            <p class="product_descr">@item.Name</p>
+                            <p class="product_descr"><strong>@item.Quantity</strong></p> In Stock
+                        </div>
+                    </div>
+                </div>
+            }
+            <!-- end product -->
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\MvcInterface\\MvcInterface.csproj": {}
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\MvcInterface\\MvcInterface.csproj": {}
   },
   "projects": {
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\MvcInterface\\MvcInterface.csproj": {
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\MvcInterface\\MvcInterface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\MvcInterface\\MvcInterface.csproj",
+        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\MvcInterface\\MvcInterface.csproj",
         "projectName": "MvcInterface",
-        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\MvcInterface\\MvcInterface.csproj",
+        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\MvcInterface\\MvcInterface.csproj",
         "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\MvcInterface\\obj\\",
+        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\MvcInterface\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\prince.lunga\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -31,9 +29,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSMvc\\POSSMvc.csproj": {
-                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSMvc\\POSSMvc.csproj"
+              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSSMvc\\POSSMvc.csproj": {
+                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSSMvc\\POSSMvc.csproj"
               }
             }
           }
@@ -46,6 +45,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.Google": {
               "target": "Package",
@@ -71,6 +71,10 @@
               "target": "Package",
               "version": "[3.1.4, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
             "Stripe": {
               "target": "Package",
               "version": "[1.12.0, )"
@@ -90,12 +94,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -104,27 +102,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj": {
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj",
         "projectName": "POSS.DataAccess",
-        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj",
+        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj",
         "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSS.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSS.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\prince.lunga\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -135,9 +131,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSModels\\POSS.Models.csproj": {
-                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSModels\\POSS.Models.csproj"
+              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSSModels\\POSS.Models.csproj": {
+                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSSModels\\POSS.Models.csproj"
               }
             }
           }
@@ -150,6 +147,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -176,38 +174,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSModels\\POSS.Models.csproj": {
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSSModels\\POSS.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSModels\\POSS.Models.csproj",
+        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSSModels\\POSS.Models.csproj",
         "projectName": "POSS.Models",
-        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSModels\\POSS.Models.csproj",
+        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSSModels\\POSS.Models.csproj",
         "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSModels\\obj\\",
+        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSSModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\prince.lunga\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -218,6 +208,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -229,6 +220,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
@@ -245,38 +237,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSMvc\\POSSMvc.csproj": {
+    "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSSMvc\\POSSMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSMvc\\POSSMvc.csproj",
+        "projectUniqueName": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSSMvc\\POSSMvc.csproj",
         "projectName": "POSSMvc",
-        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSMvc\\POSSMvc.csproj",
+        "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSSMvc\\POSSMvc.csproj",
         "packagesPath": "C:\\Users\\prince.lunga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSSMvc\\obj\\",
+        "outputPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSSMvc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\prince.lunga\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -288,8 +272,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj"
+              "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj"
               }
             }
           }
@@ -354,12 +338,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -368,7 +346,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -15,3 +15,12 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\Helpers\obj
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.pdb
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.csprojAssemblyReference.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\Helpers\bin\Debug\netcoreapp3.1\Helpers.deps.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\Helpers\bin\Debug\netcoreapp3.1\Helpers.dll
+C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\Helpers\bin\Debug\netcoreapp3.1\Helpers.pdb
+C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.csprojAssemblyReference.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.AssemblyInfoInputs.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.AssemblyInfo.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.csproj.CoreCompileInputs.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.dll
+C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\Helpers\obj\Debug\netcoreapp3.1\Helpers.pdb

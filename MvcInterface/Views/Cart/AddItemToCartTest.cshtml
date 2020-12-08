@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MvcInterface.Models.Product>
+@{
+    ViewBag.Title = "Patience Online Shopping";
+    Layout = "~/Views/Shared/_UserDashBoardcshtml.cshtml";
+}
+
+<div class="layout_padding-2">
+    <div class="container">
+        @foreach (var x in Model)
+        {
+        <form asp-action="AddItemToCartTest" method="post" enctype="multipart/form-data">
+            <div class="row">
+
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="img_box">
+                        <figure><img src="data:image/jpeg;base64,@(Convert.ToBase64String(x.Image))" alt="#" /></figure>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 product_detail_side">
+                    <div class="abotext_box">
+                        <div class="product-heading">
+                            <h2>@x.Name</h2>
+                        </div>
+                        <div class="product-detail-side">
+                            <span class="new-price">R @x.Price</span>
+                            <span class="rating">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </span>
+                            <span class="review">(5 customer review)</span>
+                        </div>
+                        <div class="detail-contant">
+                            <p>
+                                @x.Description
+                                <br><span class="stock">@x.Quantity in stock</span>
+                            </p>
+                            <form class="cart" method="post" action="shop-cart.html">
+                                <div class="quantity">
+                                    <input step="1" min="1" max="5" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" type="number">
+                                </div>
+                                <button type="submit" class="bt_main">Add to cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        }
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="tab_bar_section">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#description">Description</a> </li>
+                            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#reviews">Reviews (2)</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -80,7 +80,11 @@ namespace MvcInterface.Controllers
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     cartItem = JsonConvert.DeserializeObject<Product>(apiResponse);
+<<<<<<< HEAD
                     
+=======
+                    cartItem.Quantity = 1;
+>>>>>>> Layout_Update
                 }
             }
             products.Add(cartItem);
