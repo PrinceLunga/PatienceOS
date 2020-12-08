@@ -1,10 +1,14 @@
 {
   "version": 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "L+VLiFot7SAmOuss27VdC2UqhmWeFu/Z2IIRI9+8iZiPlmMnQTNCdzm+SXuEsL3ZmNFs2MYNBfEiX3jtYvF+uQ==",
 =======
   "dgSpecHash": "ua1sXvGNScETEIIuryq3VXAKmuWnk2Y2wD/edyxRyApfxHtmryoF1nZ6UBciaM0UEic2RRab5BzoU/sv0dQ/2w==",
 >>>>>>> origin/sub_Branch
+=======
+  "dgSpecHash": "yoX/w7gXlTMIWsTBA0g86kfTbSK8gQOPgBUSQ30XEglGscS86bGCnSQCvVeIvutzCoqL6NuysS8z/UAEEOgTaQ==",
+>>>>>>> origin/cart_remove_bug_fix
   "success": true,
   "projectFilePath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSS\\POSS.csproj",
   "expectedPackageFiles": [

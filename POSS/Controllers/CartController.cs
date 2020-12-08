@@ -39,11 +39,11 @@ namespace POSS.Controllers
 
 
         [HttpPost]
-        public async  Task<ActionResult<CartModel>> PostOrder(AddToCartModel model)
+        public ActionResult<CartModel> PostOrder(AddToCartModel model)
         {
             if (model.Username != null)
             {
-                CartModel results =  cartService.AddToCart(model);
+                CartModel results = cartService.AddToCart(model);
                 return results;
             }
             else

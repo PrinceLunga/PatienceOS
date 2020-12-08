@@ -382,6 +382,7 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\PatienceOS\PatienceOS\POSS\bin\Deb
 C:\Users\prince.lunga\Desktop\Prince\Projects\PatienceOS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\PatienceOS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\PatienceOS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
+<<<<<<< HEAD
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -391,6 +392,8 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\De
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.runtimeconfig.dev.json
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.pdb
+=======
+>>>>>>> origin/cart_remove_bug_fix
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
@@ -545,10 +548,16 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\De
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.DataAccess.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.Models.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.Services.dll
+<<<<<<< HEAD
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.DataAccess.pdb
+=======
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSSMvc.dll
+>>>>>>> origin/cart_remove_bug_fix
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.Services.pdb
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Helpers.pdb
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.DataAccess.pdb
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.Models.pdb
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSSMvc.pdb
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.csprojAssemblyReference.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.AssemblyInfoInputs.cache
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.AssemblyInfo.cs
@@ -560,6 +569,22 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\De
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\Debug\netcoreapp3.1\staticwebassets\POSS.StaticWebAssets.xml
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.pdb
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSSMvc.Views.dll
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSSMvc.Views.pdb
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSSMvc.exe
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\global.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.StaticWebAssets.xml
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.exe
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.deps.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.runtimeconfig.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.runtimeconfig.dev.json
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.dll
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.pdb
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.genruntimeconfig.cache
 <<<<<<< HEAD
 C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.dll
