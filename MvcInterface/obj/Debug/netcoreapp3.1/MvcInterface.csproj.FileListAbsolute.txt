@@ -190,6 +190,7 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterfac
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\Delivery\UpdateDeliveryAddress.cshtml.g.cs
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\MvcInterface.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\MvcInterface.pdb
 =======
@@ -652,3 +653,7 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\MvcInterface.pdb
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\MvcInterface.genruntimeconfig.cache
 >>>>>>> origin/Read
+=======
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_HomeLayoutv1.cshtml.g.cs
+C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\Home\IndexTwo.cshtml.g.cs
+>>>>>>> origin/Layout

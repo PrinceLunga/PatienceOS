@@ -1,7 +1,11 @@
 ﻿@model IEnumerable<MvcInterface.Models.Product>
 @{
     ViewBag.Title = "Patience Online Shopping";
+<<<<<<< HEAD
     Layout = "~/Views/Shared/_UserDashBoardcshtml.cshtml";
+=======
+    Layout = "~/Views/Shared/_HomeLayoutv1.cshtml";
+>>>>>>> origin/Layout
 }
 
 
@@ -36,10 +40,6 @@
 <script type="text/JavaScript" src="http://www.professorcloud.com/js/cloud-zoom.1.0.2.js"></script>
 <script src="~/Scripts/app.js"></script>
 
-
-<h3>Product Details</h3>
-
-
 <div ng-controller="MainCtrl">
 
 
@@ -47,14 +47,57 @@
     {
         <div class="panel panel-default">
             <form asp-action="AddItemToCart" method="post" enctype="multipart/form-data">
-                <div class="panel-heading">@x.Name</div>
-                <div class="panel-body">
-                    <div class="col-sm-3 col-md-6" style="color:blue">
-                        <a href="http://localhost:56829/ZoomImages/@x.Image" class="cloud-zoom" rel="adjustX: 10, adjustY:-4">
-                            <img src="data:image/jpeg;base64,@(Convert.ToBase64String(x.Image))" width="400" height="400" />
-                        </a>
 
+                <div class="row">
+
+                    <!-- Content Column -->
+                    <div class="col-lg-6 mb-4">
+
+                            <div class="card-body">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <a href="http://localhost:56829/ZoomImages/@x.Image" class="cloud-zoom" rel="adjustX: 10, adjustY:-4">
+                                                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(x.Image))" width="300" height="300" />
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a><span id="Category" style="color:black"><b>Category:</b></span></a>
+
+                                            <a><span id="Group" style="color:black">@x.Group</span></a>
+
+                                            <a><span id="Price" style="color:black"><b>Price:</b></span></a>
+
+                                            <a><span id="Price" style="color:black">@x.Price</span></a><br />
+
+                                            <a><span id="Department" style="color:black"><b>Department:</b></span></a>
+                                            <a><span id="SubGroup" style="color:black">@x.SubGroup</span></a>
+                                            <a><span id="Discount" style="color:black"><b>Discount</b></span></a>
+                                            <a><span id="Discount" style="color:black">@x.Discount</span></a>
+
+
+                                            <button type="submit" class="btn btn-info btn-lg">
+                                                <span class="glyphicon glyphicon-shopping-cart-50"></span> Add To Cart
+                                            </button>
+                                            <br />
+                                            <a href="@Url.Action("Index", "Product")" class="btn btn-success btn-icon-split">
+                                                <span class="glyphicon glyphicon-eye-open-50">
+                                                    <i class="fas fa-check"></i>
+                                                </span>
+                                                <span class="text">Continue shopping</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                @*<div class="col-sm-3 col-md-6" style="color:blue">
+                                   
+
+                                   
+                                </div>*@
+                            </div>
+                        </div>
                     </div>
+<<<<<<< HEAD
                     <div class="col-sm-9 col-md-6">
                         <h3><span id="Category" style="color:black"><b>Category:</b></span></h3>
 
@@ -84,7 +127,10 @@
                     <br />
 
                 </div>
+=======
+>>>>>>> origin/Layout
             </form>
+
         </div>
     }
 </div>
