@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "ewrnximNJ2t3GoSbrPkMiyrULIZHMGE+cKHDMMVWmB3+oaFwxiufnFEe2udKsDVRiiLaNBZC8IBpugMPoAZ9NQ==",
+=======
+  "dgSpecHash": "X57UlWMxRndBB7Qz1HZZ5Vhfjk8hCh5h0xyyfE0WSKzIhmVEZo5jTxwjpgJigs5QnpeEU/0KUt29RMpJ8hnEag==",
+>>>>>>> origin/sub_Branch
   "success": true,
   "projectFilePath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSS.Services\\POSS.Services.csproj",
   "expectedPackageFiles": [

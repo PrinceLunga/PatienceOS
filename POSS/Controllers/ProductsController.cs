@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using POSS.Models.Product;
 using POSS.Services.Interfaces;
 using POSSModels;
 
@@ -74,12 +76,23 @@ namespace POSS.Controllers
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
         [AcceptVerbs("POST")]
-        public  ActionResult<ProductModel> PostProduct( [FromForm] ProductModel product)
+        //[EnableCors("AllowOrigin")]
+        public  ActionResult<PostProductModel> PostProduct(PostProductModel product)
         {
-             _context.Add_Product(product);
-            return product;
-        }
+            try
+            {
+                _context.Add_Product(product);
+                return product;
+            }
+            catch (System.Exception)
+            {
 
+                throw new System.Exception();
+            }
+            
+            
+            }
+            
         // DELETE: api/Products/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<ProductModel>> DeleteProduct(int id)

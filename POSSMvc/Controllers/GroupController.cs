@@ -8,10 +8,10 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using POSSMvc.Models;
-using Group = POSSMvc.Models.Group;
+using MvcInterface.Models;
+using Group = MvcInterface.Models.Group;
 
-namespace POSSMvc.Controllers
+namespace MvcInterface.Controllers
 {
     public class GroupController : Controller
     {

@@ -13,8 +13,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\POSSModels\POSS.Models.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -1,10 +1,13 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "lf2bJgUCT9Wbp6ZZpts+Cj5u58LjVm83RVUpxqto0Bb6qUNv0jVy4hxt0hz+mSSTkxpD+u7Qc3M33d2lqJ9hIg==",
+=======
+  "dgSpecHash": "Azc/RZI6E36BugV+e4Hy8kV9rINtaB+A0elRiCZnEgByHiHrny2tR5pm4TqtKdrR4L05LitUFBW8cEWYVSVwAg==",
+>>>>>>> origin/sub_Branch
   "success": true,
   "projectFilePath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSS.DataAccess\\POSS.DataAccess.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\prince.lunga\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.3\\microsoft.aspnetcore.http.features.3.1.3.nupkg.sha512",
     "C:\\Users\\prince.lunga\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\prince.lunga\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\prince.lunga\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -26,7 +29,7 @@
     "C:\\Users\\prince.lunga\\.nuget\\packages\\microsoft.extensions.logging\\3.1.2\\microsoft.extensions.logging.3.1.2.nupkg.sha512",
     "C:\\Users\\prince.lunga\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.2\\microsoft.extensions.logging.abstractions.3.1.2.nupkg.sha512",
     "C:\\Users\\prince.lunga\\.nuget\\packages\\microsoft.extensions.options\\3.1.2\\microsoft.extensions.options.3.1.2.nupkg.sha512",
-    "C:\\Users\\prince.lunga\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.3\\microsoft.extensions.primitives.3.1.3.nupkg.sha512",
+    "C:\\Users\\prince.lunga\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.2\\microsoft.extensions.primitives.3.1.2.nupkg.sha512",
     "C:\\Users\\prince.lunga\\.nuget\\packages\\microsoft.identity.client\\3.0.8\\microsoft.identity.client.3.0.8.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
@@ -55,7 +58,10 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
+<<<<<<< HEAD
     "C:\\Users\\prince.lunga\\.nuget\\packages\\system.io.pipelines\\4.7.1\\system.io.pipelines.4.7.1.nupkg.sha512",
+=======
+>>>>>>> origin/sub_Branch
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",

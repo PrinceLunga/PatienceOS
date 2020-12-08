@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "VYO3vBmU1yYWci6D/HxNqvyjBXaAUteI5+eCyT7X0IX9GTtkjDET6Ng7W/iBZjTcfPB9FnHtz6HX7SqtnZ32Bw==",
   "success": true,
   "projectFilePath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\Helpers\\Helpers.csproj",
+=======
+  "dgSpecHash": "NpwcYHE66GYoYGwgOpTaX16Crjn+pOKLNp8KuZ1eU7peciPJtnLt5cT7bJR53fh1UGKE3w3OGTNYXp4AnZNf6w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\POSS_Backup\\PatienceOS\\Helpers\\Helpers.csproj",
+>>>>>>> origin/sub_Branch
   "expectedPackageFiles": [],
   "logs": []
 }

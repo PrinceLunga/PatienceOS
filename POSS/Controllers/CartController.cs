@@ -14,7 +14,6 @@ namespace POSS.Controllers
     public class CartController : ControllerBase
     {
         private readonly ICartService cartService;
-        private readonly Customer customer = null;
 
         public CartController(ICartService _cartService)
         {

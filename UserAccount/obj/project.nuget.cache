@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "r2M5GTZbVeC6oa4ereohb/obNdLbaH2kBK+inmr8+TDuCpLTDpWjyvZR5ONKKL9EbVODmljGy+whJUCE52gV0w==",
+=======
+  "dgSpecHash": "yt1qj/JjKgA5Ko7NwShyMDM54Q0SaikoXFM4stnOZqlU2z9Oc0rJdxbAv7lZSwspxo3LIkUXHGiZa2JTgXySKA==",
+>>>>>>> origin/sub_Branch
   "success": true,
   "projectFilePath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\UserAccount\\UserAccount.csproj",
   "expectedPackageFiles": [

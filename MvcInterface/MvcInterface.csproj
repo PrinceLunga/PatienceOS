@@ -12,15 +12,20 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.4" />
+<<<<<<< HEAD
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+=======
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
+>>>>>>> origin/sub_Branch
     <PackageReference Include="Stripe" Version="1.12.0" />
     <PackageReference Include="Stripe.net" Version="37.6.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\POSSMvc\POSSMvc.csproj" />
+    <ProjectReference Include="..\POSSModels\POSS.Models.csproj" />
   </ItemGroup>
 
+<<<<<<< HEAD
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Models\" />
@@ -36,5 +41,7 @@
     <Folder Include="wwwroot\lib\jquery\dist\" />
     <Folder Include="wwwroot\users\" />
   </ItemGroup>
+=======
+>>>>>>> origin/sub_Branch
 
 </Project>

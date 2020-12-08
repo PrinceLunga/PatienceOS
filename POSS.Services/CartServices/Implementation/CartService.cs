@@ -44,7 +44,10 @@ namespace POSS.Services.CartServices.Implementation
                     }
 
                     //Find the product on the cart
+<<<<<<< HEAD
                     //double productPrice = 0;
+=======
+>>>>>>> origin/sub_Branch
 
                     var product = dbContext.Products.Where(x => x.Id == model.Id).SingleOrDefault();
 
@@ -104,13 +107,17 @@ namespace POSS.Services.CartServices.Implementation
             {
                 using (dbContext)
                 {
-                    var product = dbContext.Products.Find(Id);
-                    var cart = dbContext.Carts.Where(x => x.ProductId == Id && x.UserCartId == Username).SingleOrDefault();
-
-                    if (cart != null)
+                    if(Username != null)
                     {
-                        dbContext.Carts.Remove(cart);
-                        dbContext.SaveChanges();
+                        var product = dbContext.Products.Find(Id);
+                        var cart = dbContext.Carts.Where(x => x.ProductId == Id && x.UserCartId == Username).SingleOrDefault();
+
+                        if (cart != null)
+                        {
+                            dbContext.Carts.Remove(cart);
+                            dbContext.SaveChanges();
+                        }
+
                     }
                 }
                 return $"Item removed from cart !";

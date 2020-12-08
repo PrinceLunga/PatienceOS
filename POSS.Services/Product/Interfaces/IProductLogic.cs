@@ -9,7 +9,7 @@ namespace POSS.Services.Interfaces
 {
     public interface IProductLogic
     {
-        public String Add_Product(ProductModel model);
+        public String Add_Product(PostProductModel model);
         public ProductModel FindProductById(int Id);
         public List<ProductModel> GetProducts();
         public String DeleteProduct(int Id);

@@ -77,6 +77,33 @@ namespace POSS.Controllers
             return model;
         }
 
+        [HttpPut("{id}")]
+        [AcceptVerbs("POST", "PUT")]
+        public ActionResult<GroupModel> DeleteGroup(int id, GroupModel model)
+        {
+            try
+            {
+                if ((model == null) || (model.Id == 0))
+                {
+                    return NotFound();
+                }
+                _context.DeleteGroup(id);
+
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!GroupExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return model;
+        }
+
         private bool GroupExists(int id)
         {
             return _context.GroupExists(id);
