@@ -16,6 +16,5 @@ namespace POSS.DataAccess.DataModels
         public string Status { get; set; }
         public DateTime DateRecorded { get; set; }
         public int ProductId { get; set; }
-       // public virtual Product Product { get; set; }
     }
 }

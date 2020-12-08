@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using POSS.DataAccess.Context;
 using POSS.DataAccess.DataModels;
 using POSS.Models.CartHistory;
@@ -23,7 +24,7 @@ namespace POSS.Services.CartHistoryService
         }
 
 
-        public CartHistoryModel AddToCartHistory(CartHistoryModel model)
+        public string AddToCartHistory(CartHistoryModel model)
         {
             using (dbContext)
             {
@@ -31,10 +32,8 @@ namespace POSS.Services.CartHistoryService
                 {
                     CartHistory history = new CartHistory
                     {
-                        CartHistoryId = model.CartHistoryId,
                         ProductId = model.ProductId,
                         UserCartId = model.UserCartId,
-                        //Product = model.Product,
                         Quantity = model.Quantity,
                         Price =model.Price,
                         Status = model.Status,
@@ -42,10 +41,10 @@ namespace POSS.Services.CartHistoryService
                     };
                     _ = dbContext.CartHistories.Add(history);
                     _ = dbContext.SaveChanges();
-                    return model;
+                    return "Successfully added !";
                 }
             }
-            return model;
+            return null;
         }
 
         public List<CartHistoryModel> ViewCartHistory()
@@ -55,7 +54,6 @@ namespace POSS.Services.CartHistoryService
                 return dbContext.CartHistories.Select(x => new CartHistoryModel
                 {
                     CartHistoryId = x.CartHistoryId,
-                    //Product = x.Product,
                     DateRecorded = x.DateRecorded,
                     Quantity = x.Quantity,
                     UserCartId = x.UserCartId,
@@ -66,14 +64,64 @@ namespace POSS.Services.CartHistoryService
             }
         }
 
-        public CartHistoryModel UpdateCartHistory(int modelCartHistoryId, CartHistoryModel model)
+        public string UpdateCartHistory(CartHistoryModel model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (dbContext)
+                {
+                    var history = dbContext.CartHistories.Find(model.CartHistoryId);
+
+                    history.UserCartId = model.UserCartId;
+                    history.Status = model.Status;
+                    history.ProductId = model.ProductId;
+                    history.Price = model.Price;
+                    history.Quantity = model.Quantity;
+                    history.DateRecorded = model.DateRecorded;
+
+                    dbContext.SaveChanges();
+                    return "Successfully updated!";
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message.ToString();
+            }
         }
 
-        public string DeleteCartHistory(int modelCartHistoryId)
+        public string DeleteCartHistory(CartHistoryModel modelCartHistoryId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (dbContext)
+                {
+                    var history = dbContext.CartHistories.Find(modelCartHistoryId.CartHistoryId);
+                    dbContext.Remove(history);
+                    dbContext.SaveChanges();
+                    return "Successfully updated!";
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message.ToString();
+            }
+        }
+
+        public CartHistoryModel FindHistoryById(int id)
+        {
+            using (dbContext)
+            {
+                return dbContext.CartHistories.Select(x => new CartHistoryModel
+                {
+                    CartHistoryId = x.CartHistoryId,
+                    DateRecorded = x.DateRecorded,
+                    Price = x.Price,
+                    ProductId = x.ProductId,
+                    Quantity = x.Quantity,
+                    Status = x.Status,
+                    UserCartId = x.UserCartId
+                }).FirstOrDefault(b => b.CartHistoryId == id);
+            }
         }
     }
 }

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<MvcInterface.Models.CartHistoryModel>
+
+@{
+    ViewData["Title"] = "ViewCartHistory";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<h1>ViewCartHistory</h1>
+
+<p>
+    <a asp-action="AddToCartHistory">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CartHistoryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserCartId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateRecorded)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CartHistoryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserCartId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateRecorded)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "UpdateCartHistory", new { id=item.CartHistoryId }) |
+                @Html.ActionLink("Delete", "DeleteCartHistory", new {  id=item.CartHistoryId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

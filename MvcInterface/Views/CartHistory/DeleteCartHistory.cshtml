@@ -1,0 +1,29 @@
+﻿@model MvcInterface.Models.CartHistoryModel
+
+@{
+    ViewData["Title"] = "DeleteCartHistory";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<h1>DeleteCartHistory</h1>
+
+<h4>CartHistoryModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DeleteCartHistory" style="margin:0 auto;">
+            <label>Please confirm delete</label>
+            <div class="form-group">
+                
+                    <input type="submit" value="Confirm" class="btn btn-primary" />
+                
+                
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

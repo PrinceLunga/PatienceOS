@@ -221,19 +221,6 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterfac
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\Delivery\AddDeliveryAddress.cshtml.g.cs
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\Delivery\GetCustomerDeliveryAddress.cshtml.g.cs
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\Delivery\UpdateDeliveryAddress.cshtml.g.cs
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\IKVM.OpenJDK.Naming.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\IKVM.OpenJDK.Nashorn.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\POSSMvc.Views.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\POSSMvc.Views.pdb
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\POSSMvc.exe
@@ -259,6 +246,8 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\IKVM.OpenJDK.Management.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\IKVM.OpenJDK.Media.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\IKVM.OpenJDK.Misc.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\IKVM.OpenJDK.Naming.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\IKVM.OpenJDK.Nashorn.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\IKVM.OpenJDK.Remoting.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\IKVM.OpenJDK.Security.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\IKVM.OpenJDK.SwingAWT.dll
@@ -288,6 +277,7 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -302,19 +292,24 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\System.Net.Http.Extensions.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\System.Net.Http.Primitives.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
@@ -324,8 +319,10 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\Stripe.net.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
@@ -345,6 +342,7 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
@@ -379,11 +377,13 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
@@ -410,6 +410,9 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\MvcInterface.TagHelpers.output.cache
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\MvcInterface.RazorCoreGenerate.cache
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\CartHistory\AddToCartHistory.cshtml.g.cs
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\CartHistory\UpdateCartHistory.cshtml.g.cs
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\CartHistory\ViewCartHistory.cshtml.g.cs
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\Cart\AddItemToCart.cshtml.g.cs
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Charge.cshtml.g.cs
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
@@ -442,3 +445,4 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\MvcInterface.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\MvcInterface.pdb
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\MvcInterface.genruntimeconfig.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\MvcInterface\obj\Debug\netcoreapp3.1\Razor\Views\CartHistory\DeleteCartHistory.cshtml.g.cs

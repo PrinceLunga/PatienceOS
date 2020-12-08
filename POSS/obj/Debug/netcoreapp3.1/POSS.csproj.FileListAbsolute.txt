@@ -600,15 +600,6 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\De
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.pdb
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.genruntimeconfig.cache
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.csprojAssemblyReference.cache
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.AssemblyInfoInputs.cache
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.AssemblyInfo.cs
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.csproj.CoreCompileInputs.cache
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSSMvc.Views.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSSMvc.Views.pdb
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSSMvc.exe
@@ -662,6 +653,7 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcore
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
@@ -741,6 +733,7 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcore
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
@@ -784,6 +777,7 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcore
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libe_sqlite3.so
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
@@ -808,6 +802,12 @@ C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcore
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\Helpers.pdb
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSS.Models.pdb
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\bin\Debug\netcoreapp3.1\POSSMvc.pdb
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.csprojAssemblyReference.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.AssemblyInfoInputs.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.AssemblyInfo.cs
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.csproj.CoreCompileInputs.cache
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\staticwebassets\POSS.StaticWebAssets.Manifest.cache
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\staticwebassets\POSS.StaticWebAssets.xml
 C:\Users\Nhlanhla Vilakazi\Desktop\Patience OS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\scopedcss\bundle\POSS.styles.css

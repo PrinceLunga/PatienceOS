@@ -7,9 +7,10 @@ namespace POSS.Services.CartHistoryService.Interface
 {
     public interface ICartHistoryService
     {
-        public CartHistoryModel AddToCartHistory(CartHistoryModel model);
+        public string AddToCartHistory(CartHistoryModel model);
         public List<CartHistoryModel> ViewCartHistory();
-        public CartHistoryModel UpdateCartHistory(int modelCartHistoryId, CartHistoryModel model);
-        public string DeleteCartHistory(int modelCartHistoryId);
+        public string UpdateCartHistory(CartHistoryModel model);
+        public string DeleteCartHistory(CartHistoryModel model);
+        public CartHistoryModel FindHistoryById(int id);
     }
 }

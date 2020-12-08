@@ -1,0 +1,61 @@
+﻿@model MvcInterface.Models.CartHistoryModel
+
+@{
+    ViewData["Title"] = "AddToCartHistory";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<h1>AddToCartHistory</h1>
+
+<h4>CartHistoryModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddToCartHistory">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CartHistoryId" class="control-label"></label>
+                <input asp-for="CartHistoryId" class="form-control" />
+                <span asp-validation-for="CartHistoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserCartId" class="control-label"></label>
+                <input asp-for="UserCartId" class="form-control" />
+                <span asp-validation-for="UserCartId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateRecorded" class="control-label"></label>
+                <input asp-for="DateRecorded" class="form-control" />
+                <span asp-validation-for="DateRecorded" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductId" class="control-label"></label>
+                <input asp-for="ProductId" class="form-control" />
+                <span asp-validation-for="ProductId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
