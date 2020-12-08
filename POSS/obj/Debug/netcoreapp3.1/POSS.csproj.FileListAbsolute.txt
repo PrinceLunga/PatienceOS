@@ -600,3 +600,5 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\De
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.pdb
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.genruntimeconfig.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.dll
+C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\POSS\obj\Debug\netcoreapp3.1\POSS.pdb

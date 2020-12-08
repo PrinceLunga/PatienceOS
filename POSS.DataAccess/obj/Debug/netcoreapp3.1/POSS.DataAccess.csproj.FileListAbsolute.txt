@@ -36,3 +36,5 @@ C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAc
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.dll
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.pdb
 C:\Users\prince.lunga\Desktop\Prince\Projects\POSS_Backup\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.genruntimeconfig.cache
+C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.dll
+C:\Users\prince.lunga\Desktop\Prince\Projects\2020\POSS\PatienceOS\POSS.DataAccess\obj\Debug\netcoreapp3.1\POSS.DataAccess.pdb
