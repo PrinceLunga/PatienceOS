@@ -34,6 +34,6 @@
   <ItemGroup>
     <ProjectReference Include="..\POSS.DataAccess\POSS.DataAccess.csproj" />
     <ProjectReference Include="..\POSS.Services\POSS.Services.csproj" />
-    <ProjectReference Include="..\POSSMvc\POSSMvc.csproj" />
+    <ProjectReference Include="..\POSSModels\POSS.Models.csproj" />
   </ItemGroup>
 </Project>
