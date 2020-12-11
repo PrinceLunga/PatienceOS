@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L+VLiFot7SAmOuss27VdC2UqhmWeFu/Z2IIRI9+8iZiPlmMnQTNCdzm+SXuEsL3ZmNFs2MYNBfEiX3jtYvF+uQ==",
+  "dgSpecHash": "WASxshU5COJctDZ99xxJswMdEya/AqI00ab8KhW9THlnxRYw8XKwCCsRPJfsOLBZMvIjiE2Sf33uproSeKOQdA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS\\PatienceOS\\POSS\\POSS.csproj",
+  "projectFilePath": "C:\\Users\\prince.lunga\\Desktop\\Prince\\Projects\\2020\\POSS_old\\PatienceOS\\POSS\\POSS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\prince.lunga\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\prince.lunga\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",
